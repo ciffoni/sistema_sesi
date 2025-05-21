@@ -1,0 +1,11 @@
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\bin\Debug\Sistema.exe.config
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\bin\Debug\Sistema.exe
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\bin\Debug\Sistema.pdb
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.AssemblyReference.cache
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.FrmPrincipal.resources
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.Properties.Resources.resources
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.GenerateResource.cache
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.exe
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.pdb
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.FrmUsuario.resources
