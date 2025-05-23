@@ -35,6 +35,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -95,11 +98,39 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(68, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "label4";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(347, 145);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.Text = "excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(138, 19);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(100, 22);
+            this.txtid.TabIndex = 9;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
@@ -109,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmUsuario";
             this.Text = "Cadastrar Usuário";
+            this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +155,8 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox txtid;
     }
 }
