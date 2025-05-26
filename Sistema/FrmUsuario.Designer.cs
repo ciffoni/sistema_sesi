@@ -38,6 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.dadosUsuario = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dadosUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +87,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(138, 125);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(100, 22);
             this.txtSenha.TabIndex = 5;
             // 
@@ -103,18 +106,19 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(68, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.label4.Text = "codigo:";
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(347, 145);
+            this.btnExcluir.Location = new System.Drawing.Point(353, 118);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // txtid
             // 
@@ -123,11 +127,23 @@
             this.txtid.Size = new System.Drawing.Size(100, 22);
             this.txtid.TabIndex = 9;
             // 
+            // dadosUsuario
+            // 
+            this.dadosUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dadosUsuario.Location = new System.Drawing.Point(71, 209);
+            this.dadosUsuario.Name = "dadosUsuario";
+            this.dadosUsuario.RowHeadersWidth = 51;
+            this.dadosUsuario.RowTemplate.Height = 24;
+            this.dadosUsuario.Size = new System.Drawing.Size(656, 150);
+            this.dadosUsuario.TabIndex = 10;
+            this.dadosUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosUsuario_CellContentClick);
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dadosUsuario);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label4);
@@ -141,6 +157,7 @@
             this.Name = "FrmUsuario";
             this.Text = "Cadastrar Usuário";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dadosUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +175,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.DataGridView dadosUsuario;
     }
 }
