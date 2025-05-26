@@ -39,6 +39,7 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
             this.dadosUsuario = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dadosUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(353, 69);
+            this.btnCadastrar.Location = new System.Drawing.Point(330, 21);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 6;
@@ -112,7 +113,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(353, 118);
+            this.btnExcluir.Location = new System.Drawing.Point(330, 70);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 8;
@@ -138,11 +139,22 @@
             this.dadosUsuario.TabIndex = 10;
             this.dadosUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosUsuario_CellContentClick);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(330, 121);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dadosUsuario);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.btnExcluir);
@@ -176,5 +188,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.DataGridView dadosUsuario;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

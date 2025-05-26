@@ -58,6 +58,7 @@ namespace Sistema
                     //executar a consulta no banco de dados
                     comando.ExecuteNonQuery();
                     dadosUsuario.DataSource = obterdados();
+                    limparCampos();
                 }
                 //fechar a conexao do banco
                 conexao.Close();
@@ -101,8 +102,10 @@ namespace Sistema
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            //caminho de configuração do servidor
-            string data_source = "datasource=localhost;username=root;password='';database=sistema";
+            if (txtid.Text != "")
+            {
+                //caminho de configuração do servidor
+                string data_source = "datasource=localhost;username=root;password='';database=sistema";
             ///abrinddo a cenexao
             conexao = new MySqlConnection(data_source);
             //criando o script sql para deletar as informações
@@ -114,16 +117,23 @@ namespace Sistema
             conexao.Open();
             //executa a exclusão da informação
             //se executar corretamente
-            if (comando.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Usuário excluido com sucesso");
-                dadosUsuario.DataSource = obterdados();
+            //verificar se há informação selecionada
+           
+                if (comando.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Usuário excluido com sucesso");
+                    dadosUsuario.DataSource = obterdados();
+                    limparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Erro na exclusão do usuário");
+                }
             }
             else
             {
-                MessageBox.Show("Erro na exclusão do usuário");
+                MessageBox.Show("Escolher um usuário para excluir");
             }
-
         }
 
         private void dadosUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -138,6 +148,62 @@ namespace Sistema
             txtNOme.Text = dadosUsuario.Rows[e.RowIndex].Cells["nome"].Value.ToString();
             txtEmail.Text = dadosUsuario.Rows[e.RowIndex].Cells["email"].Value.ToString() ;
             txtSenha.Text = dadosUsuario.Rows[e.RowIndex].Cells["senha"].Value.ToString() ;
+        }
+        //metodo limpar campos
+        private void limparCampos()
+        {
+            txtid.Clear();
+            txtNOme.Clear();
+            txtEmail.Clear();
+            txtSenha.Clear();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //caminho de configuração do servidor
+                string data_source = "datasource=localhost;username=root;password='';database=sistema";
+                ///abrinddo a cenexao
+                conexao = new MySqlConnection(data_source);
+                //criando o script sql para atualizar as informações
+                string sql = "update usuario set nome='"  + txtNOme.Text + "',email='" + txtEmail.Text + "',senha='" + txtSenha.Text + "'" +
+                    "where id="+ Convert.ToInt32(txtid.Text);
+                //montar o script sql para executar
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+                //abrir o banco de dados
+                conexao.Open();
+                //se tiver vazio 
+                if (txtNOme.Text == "")
+                {
+                    //alerta para o usuario mensagem verdadeira
+                    MessageBox.Show("Nome está vazio!");
+                }
+                else
+                {
+                    // alerta para o usuario preenchido
+                    MessageBox.Show("campo preenchido!");
+                }
+                if (txtEmail.Text == "")
+                    MessageBox.Show("email está vazio");
+
+                if (txtSenha.Text == "")
+                    MessageBox.Show("Senha está vazio");
+
+                if (txtSenha.Text != "" && txtEmail.Text != "" && txtNOme.Text != "")
+                {
+                    //executar a consulta no banco de dados
+                    comando.ExecuteNonQuery();
+                    dadosUsuario.DataSource = obterdados();
+                    limparCampos();
+                }
+                //fechar a conexao do banco
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro :" + ex.Message);
+            }
         }
     }
 }
