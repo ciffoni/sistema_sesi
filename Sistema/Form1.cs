@@ -25,6 +25,12 @@ namespace Sistema
             usuario.ShowDialog();
 
         }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmproduto frmproduto = new frmproduto();
+            frmproduto.ShowDialog();
+        }
     }
 
 }
