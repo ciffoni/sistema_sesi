@@ -141,6 +141,8 @@
             this.calendario.Name = "calendario";
             this.calendario.Size = new System.Drawing.Size(200, 22);
             this.calendario.TabIndex = 10;
+            this.calendario.Value = new System.DateTime(2025, 9, 6, 0, 0, 0, 0);
+            this.calendario.ValueChanged += new System.EventHandler(this.calendario_ValueChanged);
             // 
             // txtQuantidade
             // 

@@ -19,6 +19,8 @@ namespace Sistema
         MySqlConnection conexao;
         public frmproduto()
         {
+
+            calendario.CustomFormat = "yyyy-mm-dd";
             InitializeComponent();
         }
 
@@ -65,7 +67,6 @@ namespace Sistema
                 MessageBox.Show("Quantidade está vazia!");
             }
 
-           label6.Text= calendario.Text;
                 //caminho de configuração do servidor
                 string data_source = "datasource=localhost;username=root;password='';database=sistema";
                 ///abrinddo a cenexao
@@ -95,6 +96,12 @@ namespace Sistema
             }
 
 
+        }
+
+        private void calendario_ValueChanged(object sender, EventArgs e)
+        {
+            
+            label6.Text = calendario.ToString();
         }
     }
 }

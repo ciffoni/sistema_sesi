@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\aluno\\documents\\github\\sistema_sesi\\sistema\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\aluno\\documents\\github\\sistema_sesi\\sistema\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -21,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "frmproduto.cs",
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs",
               "RelativeToolTip": "frmproduto.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAkwEQAAAAnAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T11:32:33.806Z",
               "EditorCaption": ""
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FrmUsuario.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
               "RelativeDocumentMoniker": "FrmUsuario.cs",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -83,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "FrmUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
               "RelativeDocumentMoniker": "FrmUsuario.cs",
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
               "RelativeToolTip": "FrmUsuario.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAuwEMAAAANAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAQwCAAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T13:11:05.935Z",
               "EditorCaption": ""
