@@ -20,7 +20,7 @@ namespace Sistema
         public frmproduto()
         {
 
-            calendario.CustomFormat = "yyyy-mm-dd";
+          
             InitializeComponent();
         }
 

@@ -31,6 +31,12 @@ namespace Sistema
             frmproduto frmproduto = new frmproduto();
             frmproduto.ShowDialog();
         }
+
+        private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           pedido pd= new pedido();
+            pd.ShowDialog();
+        }
     }
 
 }

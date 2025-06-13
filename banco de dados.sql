@@ -21,3 +21,19 @@ foto varchar(60),
 promocao tinyint
 );
 select * from produto;
+
+create table pedido(
+idpedido int primary key auto_increment,
+idusuario int,
+formapagamento varchar(60),
+constraint 'fk_usuario' foreign key (idusuario) references usuario(id)
+);
+create table itenspedido(
+iditens int primary key auto_increment,
+idproduto int,
+quantidade int,
+total decimal(5,2),
+constraint 'fk_produto' foreign key (idproduto) references produto(id)
+);
+
+

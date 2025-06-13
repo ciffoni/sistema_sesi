@@ -45,3 +45,4 @@ C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.Su
 C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.exe.config
 C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.Up2Date
 C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.frmproduto.resources
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.pedido.resources
