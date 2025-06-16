@@ -34,8 +34,10 @@
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testarConexaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fecharConexaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,29 +73,46 @@
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem
             // 
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.produtoToolStripMenuItem.Text = "Produto";
             this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
-            // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
             // 
             // pedidoToolStripMenuItem
             // 
             this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
-            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.pedidoToolStripMenuItem.Text = "Pedido";
             this.pedidoToolStripMenuItem.Click += new System.EventHandler(this.pedidoToolStripMenuItem_Click);
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testarConexaoToolStripMenuItem,
+            this.fecharConexaoToolStripMenuItem});
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // testarConexaoToolStripMenuItem
+            // 
+            this.testarConexaoToolStripMenuItem.Name = "testarConexaoToolStripMenuItem";
+            this.testarConexaoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.testarConexaoToolStripMenuItem.Text = "testar conexao abrir";
+            this.testarConexaoToolStripMenuItem.Click += new System.EventHandler(this.testarConexaoToolStripMenuItem_Click);
+            // 
+            // fecharConexaoToolStripMenuItem
+            // 
+            this.fecharConexaoToolStripMenuItem.Name = "fecharConexaoToolStripMenuItem";
+            this.fecharConexaoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fecharConexaoToolStripMenuItem.Text = "fechar conexao";
+            this.fecharConexaoToolStripMenuItem.Click += new System.EventHandler(this.fecharConexaoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -123,6 +142,8 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testarConexaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fecharConexaoToolStripMenuItem;
     }
 }
 

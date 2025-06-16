@@ -104,6 +104,7 @@
     <Compile Include="carrinho.Designer.cs">
       <DependentUpon>carrinho.cs</DependentUpon>
     </Compile>
+    <Compile Include="classe\conexao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
