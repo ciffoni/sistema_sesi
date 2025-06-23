@@ -47,3 +47,4 @@ C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.Co
 C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.Up2Date
 C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.exe
 C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.pdb
+C:\Users\Aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.listarproduto.resources

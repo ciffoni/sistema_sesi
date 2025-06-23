@@ -64,6 +64,12 @@ namespace Sistema
             conexao conexao= new conexao();
             conexao.desconectar();
         }
+
+        private void listarProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listarproduto lp=new listarproduto();
+            lp.ShowDialog();
+        }
     }
 
 }

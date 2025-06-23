@@ -25,15 +25,14 @@ select * from produto;
 create table pedido(
 idpedido int primary key auto_increment,
 idusuario int,
-formapagamento varchar(60),
-constraint 'fk_usuario' foreign key (idusuario) references usuario(id)
+formapagamento varchar(60)
 );
 create table itenspedido(
 iditens int primary key auto_increment,
 idproduto int,
 quantidade int,
-total decimal(5,2),
-constraint 'fk_produto' foreign key (idproduto) references produto(id)
+total decimal(5,2)
 );
 
 
+select * from itenspedido;
