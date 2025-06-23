@@ -17,11 +17,21 @@ namespace Sistema
     {
         //crio a conexao com o banco
         MySqlConnection conexao;
+        //criar uma lista de item selecionado
+        public List<ItemCarrinho> CarrinhoAtual=new List<ItemCarrinho>();
         public listarproduto()
         {
             InitializeComponent();
         }
-
+//criar a classe item carrinho para estruturar as informações
+        public class ItemCarrinho
+        {
+            public int ProdutoId { get; set; }
+            public string NomeProduto { get; set; }
+            public decimal PrecoUnitario { get; set; }
+            public int Quantidade { get; set; }
+            public decimal Subtotal => PrecoUnitario * Quantidade; // Propriedade calculada
+        }
         private void listarproduto_Load(object sender, EventArgs e)
         {
             //crio a tabela para popular
@@ -68,7 +78,7 @@ namespace Sistema
                 CheckBox selecionar= new CheckBox();
                 selecionar.Text = dados.Rows[registros][0].ToString();
                 selecionar.Location = new Point(20, 140);
-                selecionar.Click += new EventHandler((sender1, e1) => selecionarClick(sender1, e1, idproduto.Text,preco.Text));
+                selecionar.Click += new EventHandler((sender1, e1) => selecionarClick(sender1, e1, idproduto.Text,descricao.Text,preco.Text));
                 //adicionar os campos ao painel
                 produtos.Controls.Add(idproduto);
                 produtos.Controls.Add(foto);
@@ -84,15 +94,21 @@ namespace Sistema
             }
         }
         
-private void selecionarClick(object sender, EventArgs e,string Id,string preco)
+private void selecionarClick(object sender, EventArgs e,string Id,string descrico,string preco)
         {
-            MessageBox.Show("Produto selecionado" + Id);
-            string sql ="insert into itenspedido(idproduto,quantidade,total)values ("+Id+","+1+","+Convert.ToDecimal(preco)+")";
-            string data_source = "datasource=localhost;username=root;password='';database=sistema";
-            conexao= new MySqlConnection(data_source);
-            conexao.Open();
-            MySqlCommand cmd= new MySqlCommand(sql, conexao);
-            cmd.ExecuteNonQuery();
+            ItemCarrinho itemCarrinho = new ItemCarrinho();
+            itemCarrinho.NomeProduto= descrico;
+            itemCarrinho.Quantidade = 1;
+            itemCarrinho.PrecoUnitario = Convert.ToDecimal(preco);
+            itemCarrinho.ProdutoId = Convert.ToInt32(Id);
+            CarrinhoAtual.Add(itemCarrinho);
+            MessageBox.Show("Produto selecionado" + CarrinhoAtual.ToString() );
+          //  string sql ="insert into itenspedido(idproduto,quantidade,total)values ("+Id+","+1+","+Convert.ToDecimal(preco)+")";
+          //  string data_source = "datasource=localhost;username=root;password='';database=sistema";
+         //   conexao= new MySqlConnection(data_source);
+         //   conexao.Open();
+         //   MySqlCommand cmd= new MySqlCommand(sql, conexao);
+         //   cmd.ExecuteNonQuery();
 
         }
         //retornando uma tabela
@@ -124,7 +140,11 @@ private void selecionarClick(object sender, EventArgs e,string Id,string preco)
 
         private void BtnComprar_Click(object sender, EventArgs e)
         {
-            
+            if (CarrinhoAtual.Any())
+            {
+                pedido pedidoatual=new pedido(CarrinhoAtual);
+                pedidoatual.Show();
+            }
         }
     }
 }

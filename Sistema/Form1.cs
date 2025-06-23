@@ -36,7 +36,7 @@ namespace Sistema
 
         private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           pedido pd= new pedido();
+           pedido pd= new pedido(null);
             pd.ShowDialog();
         }
 

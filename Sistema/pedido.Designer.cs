@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pedido));
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.cboforma = new System.Windows.Forms.ComboBox();
-            this.cboProduto = new System.Windows.Forms.ComboBox();
             this.datapedido = new System.Windows.Forms.DateTimePicker();
-            this.quantidade = new System.Windows.Forms.TextBox();
-            this.total = new System.Windows.Forms.TextBox();
             this.cadastrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCliente
@@ -57,34 +55,12 @@
             this.cboforma.Size = new System.Drawing.Size(121, 24);
             this.cboforma.TabIndex = 7;
             // 
-            // cboProduto
-            // 
-            this.cboProduto.FormattingEnabled = true;
-            this.cboProduto.Location = new System.Drawing.Point(247, 287);
-            this.cboProduto.Name = "cboProduto";
-            this.cboProduto.Size = new System.Drawing.Size(121, 24);
-            this.cboProduto.TabIndex = 8;
-            // 
             // datapedido
             // 
             this.datapedido.Location = new System.Drawing.Point(285, 130);
             this.datapedido.Name = "datapedido";
             this.datapedido.Size = new System.Drawing.Size(200, 22);
             this.datapedido.TabIndex = 9;
-            // 
-            // quantidade
-            // 
-            this.quantidade.Location = new System.Drawing.Point(285, 337);
-            this.quantidade.Name = "quantidade";
-            this.quantidade.Size = new System.Drawing.Size(100, 22);
-            this.quantidade.TabIndex = 10;
-            // 
-            // total
-            // 
-            this.total.Location = new System.Drawing.Point(185, 375);
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(100, 22);
-            this.total.TabIndex = 11;
             // 
             // cadastrar
             // 
@@ -110,27 +86,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // checkBox1
+            // dgvCarrinho
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(438, 337);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 20);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrinho.Location = new System.Drawing.Point(53, 268);
+            this.dgvCarrinho.Name = "dgvCarrinho";
+            this.dgvCarrinho.RowHeadersWidth = 51;
+            this.dgvCarrinho.RowTemplate.Height = 24;
+            this.dgvCarrinho.Size = new System.Drawing.Size(651, 150);
+            this.dgvCarrinho.TabIndex = 14;
             // 
             // pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.dgvCarrinho);
             this.Controls.Add(this.cadastrar);
-            this.Controls.Add(this.total);
-            this.Controls.Add(this.quantidade);
             this.Controls.Add(this.datapedido);
-            this.Controls.Add(this.cboProduto);
             this.Controls.Add(this.cboforma);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.pictureBox1);
@@ -138,20 +111,17 @@
             this.Text = "pedido";
             this.Load += new System.EventHandler(this.pedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.ComboBox cboCliente;
         private System.Windows.Forms.ComboBox cboforma;
-        private System.Windows.Forms.ComboBox cboProduto;
         private System.Windows.Forms.DateTimePicker datapedido;
-        private System.Windows.Forms.TextBox quantidade;
-        private System.Windows.Forms.TextBox total;
         private System.Windows.Forms.Button cadastrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridView dgvCarrinho;
     }
 }
