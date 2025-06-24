@@ -29,7 +29,7 @@ namespace Sistema
             //abrir a caixa de seleção 
             OpenFileDialog foto= new OpenFileDialog();
             //filtra as extensões
-            foto.Filter = "Image file(*.jpg;*.png)| *.jpg;*.png";
+            foto.Filter = "Image file(*.jpg;*.png;*.jpeg)|*.jpeg; *.jpg;*.png";
             //verificar se houve escolha da foto
             if (foto.ShowDialog() == DialogResult.OK)
             {
@@ -50,7 +50,6 @@ namespace Sistema
         }
         private void btncadastrar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 //verificar se os campos foram preenchidos
@@ -72,11 +71,19 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para inserir as informações
-                string sql = "insert into produto(descricao,quantidade,datacadastro,promocao,foto,preco)" +
-                    " values('" + txtDescricao.Text + "'," + Convert.ToInt32(txtQuantidade.Text) + ",'" + calendario.Value + "',"
-                    + promocao.Checked + ",'" + lblfoto.Text + "'," + Convert.ToDecimal(txtPreco.Text) + ")";
+                // Criando o script SQL para inserir as informações com PARÂMETROS
+                string sql = "INSERT INTO produto(descricao, quantidade, datacadastro, promocao, foto, preco) " +
+                             "VALUES(@descricao, @quantidade, @datacadastro, @promocao, @foto, @preco)";
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
+                // Adicionar os PARÂMETROS
+                comando.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                comando.Parameters.AddWithValue("@quantidade", Convert.ToInt32(txtQuantidade.Text));
+                comando.Parameters.AddWithValue("@datacadastro", calendario.Value); // O tipo DateTime é passado corretamente
+                comando.Parameters.AddWithValue("@promocao", promocao.Checked); // Boolean é passado corretamente
+                comando.Parameters.AddWithValue("@foto", lblfoto.Text); // A string com barras é passada corretamente
+                comando.Parameters.AddWithValue("@preco", Convert.ToDecimal(txtPreco.Text)); // O decimal é passado corretamente
+
                 //abrir o banco de dados
                 conexao.Open();
 
@@ -94,14 +101,22 @@ namespace Sistema
             {
                 MessageBox.Show("Erro :" + ex.Message);
             }
-
-
         }
 
         private void calendario_ValueChanged(object sender, EventArgs e)
         {
             
             label6.Text = calendario.ToString();
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

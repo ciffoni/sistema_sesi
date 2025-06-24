@@ -89,7 +89,7 @@
             // promocao
             // 
             this.promocao.AutoSize = true;
-            this.promocao.Location = new System.Drawing.Point(77, 211);
+            this.promocao.Location = new System.Drawing.Point(74, 219);
             this.promocao.Name = "promocao";
             this.promocao.Size = new System.Drawing.Size(92, 20);
             this.promocao.TabIndex = 4;
@@ -136,12 +136,12 @@
             // 
             // calendario
             // 
-            this.calendario.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.calendario.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.calendario.Location = new System.Drawing.Point(160, 154);
             this.calendario.Name = "calendario";
             this.calendario.Size = new System.Drawing.Size(200, 22);
             this.calendario.TabIndex = 10;
-            this.calendario.Value = new System.DateTime(2025, 9, 6, 0, 0, 0, 0);
+            this.calendario.Value = new System.DateTime(2025, 6, 24, 0, 0, 0, 0);
             this.calendario.ValueChanged += new System.EventHandler(this.calendario_ValueChanged);
             // 
             // txtQuantidade
@@ -153,7 +153,7 @@
             // 
             // btncadastrar
             // 
-            this.btncadastrar.Location = new System.Drawing.Point(423, 237);
+            this.btncadastrar.Location = new System.Drawing.Point(423, 293);
             this.btncadastrar.Name = "btncadastrar";
             this.btncadastrar.Size = new System.Drawing.Size(75, 23);
             this.btncadastrar.TabIndex = 12;
@@ -163,25 +163,27 @@
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(552, 236);
+            this.btneditar.Location = new System.Drawing.Point(552, 292);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(75, 23);
             this.btneditar.TabIndex = 13;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(423, 278);
+            this.btnExcluir.Location = new System.Drawing.Point(423, 334);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 14;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(552, 277);
+            this.button4.Location = new System.Drawing.Point(552, 333);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 15;
@@ -190,7 +192,7 @@
             // 
             // btnfoto
             // 
-            this.btnfoto.Location = new System.Drawing.Point(445, 196);
+            this.btnfoto.Location = new System.Drawing.Point(433, 233);
             this.btnfoto.Name = "btnfoto";
             this.btnfoto.Size = new System.Drawing.Size(75, 23);
             this.btnfoto.TabIndex = 16;
@@ -201,7 +203,7 @@
             // lblfoto
             // 
             this.lblfoto.AutoSize = true;
-            this.lblfoto.Location = new System.Drawing.Point(566, 196);
+            this.lblfoto.Location = new System.Drawing.Point(428, 200);
             this.lblfoto.Name = "lblfoto";
             this.lblfoto.Size = new System.Drawing.Size(44, 16);
             this.lblfoto.TabIndex = 17;

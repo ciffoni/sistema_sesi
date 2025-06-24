@@ -35,6 +35,7 @@
             this.cadastrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvCarrinho = new System.Windows.Forms.DataGridView();
+            this.cbostatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(121, 24);
             this.cboCliente.TabIndex = 6;
+            this.cboCliente.SelectedIndexChanged += new System.EventHandler(this.cboCliente_SelectedIndexChanged);
             // 
             // cboforma
             // 
@@ -71,7 +73,7 @@
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(93, 43);
             this.cadastrar.TabIndex = 12;
-            this.cadastrar.Text = "cadastrar";
+            this.cadastrar.Text = "Finalizar";
             this.cadastrar.UseVisualStyleBackColor = false;
             this.cadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -96,11 +98,20 @@
             this.dgvCarrinho.Size = new System.Drawing.Size(651, 150);
             this.dgvCarrinho.TabIndex = 14;
             // 
+            // cbostatus
+            // 
+            this.cbostatus.FormattingEnabled = true;
+            this.cbostatus.Location = new System.Drawing.Point(532, 130);
+            this.cbostatus.Name = "cbostatus";
+            this.cbostatus.Size = new System.Drawing.Size(121, 24);
+            this.cbostatus.TabIndex = 15;
+            // 
             // pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbostatus);
             this.Controls.Add(this.dgvCarrinho);
             this.Controls.Add(this.cadastrar);
             this.Controls.Add(this.datapedido);
@@ -123,5 +134,6 @@
         private System.Windows.Forms.Button cadastrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvCarrinho;
+        private System.Windows.Forms.ComboBox cbostatus;
     }
 }

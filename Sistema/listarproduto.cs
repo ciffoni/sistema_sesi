@@ -102,13 +102,7 @@ private void selecionarClick(object sender, EventArgs e,string Id,string descric
             itemCarrinho.PrecoUnitario = Convert.ToDecimal(preco);
             itemCarrinho.ProdutoId = Convert.ToInt32(Id);
             CarrinhoAtual.Add(itemCarrinho);
-            MessageBox.Show("Produto selecionado" + CarrinhoAtual.ToString() );
-          //  string sql ="insert into itenspedido(idproduto,quantidade,total)values ("+Id+","+1+","+Convert.ToDecimal(preco)+")";
-          //  string data_source = "datasource=localhost;username=root;password='';database=sistema";
-         //   conexao= new MySqlConnection(data_source);
-         //   conexao.Open();
-         //   MySqlCommand cmd= new MySqlCommand(sql, conexao);
-         //   cmd.ExecuteNonQuery();
+       
 
         }
         //retornando uma tabela

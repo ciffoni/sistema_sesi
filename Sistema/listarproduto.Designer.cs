@@ -43,9 +43,10 @@
             // 
             // BtnComprar
             // 
-            this.BtnComprar.Location = new System.Drawing.Point(591, 461);
+            this.BtnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnComprar.Location = new System.Drawing.Point(641, 456);
             this.BtnComprar.Name = "BtnComprar";
-            this.BtnComprar.Size = new System.Drawing.Size(75, 23);
+            this.BtnComprar.Size = new System.Drawing.Size(138, 40);
             this.BtnComprar.TabIndex = 1;
             this.BtnComprar.Text = "Comprar";
             this.BtnComprar.UseVisualStyleBackColor = true;
