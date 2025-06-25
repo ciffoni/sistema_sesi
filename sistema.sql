@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `sistema`
 --
-
+create database sistema;
+use sistema;
 -- --------------------------------------------------------
 
 --
@@ -123,7 +124,7 @@ INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
 --
 -- Índices para tabelas despejadas
 --
-
+select * from produto;
 --
 -- Índices de tabela `itenspedido`
 --
@@ -180,3 +181,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+select * from pedido;
+select * from itenspedido;
