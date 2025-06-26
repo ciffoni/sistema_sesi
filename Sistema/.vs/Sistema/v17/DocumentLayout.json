@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\listarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:listarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\listarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -47,30 +51,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "listarproduto.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\listarproduto.cs",
-              "RelativeDocumentMoniker": "listarproduto.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\listarproduto.cs",
-              "RelativeToolTip": "listarproduto.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAqwGcAAAAVAAAAAAAAAA==",
+              "Title": "frmproduto.cs",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs",
+              "RelativeDocumentMoniker": "frmproduto.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs",
+              "RelativeToolTip": "frmproduto.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAuwEEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T19:04:31.066Z",
+              "WhenOpened": "2025-06-25T20:13:12.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmproduto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs",
+              "RelativeDocumentMoniker": "frmproduto.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs [Design]",
+              "RelativeToolTip": "frmproduto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T20:13:08.513Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "listarproduto.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\listarproduto.cs",
               "RelativeDocumentMoniker": "listarproduto.cs",
               "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\listarproduto.cs [Design]",
               "RelativeToolTip": "listarproduto.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T19:03:39.203Z"
+              "WhenOpened": "2025-06-24T19:03:39.203Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "pedido.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\pedido.cs",
               "RelativeDocumentMoniker": "pedido.cs",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "pedido.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\pedido.cs",
               "RelativeDocumentMoniker": "pedido.cs",

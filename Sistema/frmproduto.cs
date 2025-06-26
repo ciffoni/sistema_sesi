@@ -1,15 +1,15 @@
 ﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using MySql.Data.MySqlClient;
 
 namespace Sistema
 {
@@ -26,6 +26,48 @@ namespace Sistema
 
         private void btnfoto_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.gif;*.bmp|Todos os Arquivos|*.*";
+            openFileDialog.Title = "Selecione a Imagem do Produto";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string caminhoCompletoFotoOriginal = openFileDialog.FileName;
+                string nomeArquivoFoto = Path.GetFileName(caminhoCompletoFotoOriginal);
+
+                // Define a pasta de destino dentro do diretório de execução da aplicação
+                // Isso cria uma pasta "ImagensProdutos" onde o seu .exe está rodando
+                string pastaDestinoImagens = Path.Combine(Application.StartupPath, "ImagensProdutos");
+
+                // Verifica se a pasta existe, se não, cria
+                if (!Directory.Exists(pastaDestinoImagens))
+                {
+                    Directory.CreateDirectory(pastaDestinoImagens);
+                }
+
+                string caminhoDestinoFoto = Path.Combine(pastaDestinoImagens, nomeArquivoFoto);
+
+                try
+                {
+                    // Copia o arquivo para a pasta de destino
+                    File.Copy(caminhoCompletoFotoOriginal, caminhoDestinoFoto, true); // true para sobrescrever se já existir
+
+                    // Atualiza o lblfoto.Text com o caminho RELATIVO que será salvo no banco
+                    // Ou apenas o nome do arquivo, se sua lógica de carregamento lidar com isso
+                    lblfoto.Text = Path.Combine("ImagensProdutos", nomeArquivoFoto); // Salva "ImagensProdutos\nome.jpg"
+                    pictureBox1.Image = Image.FromFile(lblfoto.Text);
+                    // Exibe a imagem na PictureBox (se tiver uma)
+                    // pictureBoxFotoProduto.ImageLocation = caminhoDestinoFoto;
+                    // Ou, para exibir imediatamente do arquivo copiado:
+                    // pictureBoxFotoProduto.Image = Image.FromFile(caminhoDestinoFoto);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao copiar a imagem: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblfoto.Text = ""; // Limpa se houver erro
+                }
+            }
+            /*
             //abrir a caixa de seleção 
             OpenFileDialog foto= new OpenFileDialog();
             //filtra as extensões
@@ -39,7 +81,7 @@ namespace Sistema
                 pictureBox1.Image = arquivo; 
                 //mostra o caminho da foto
                 lblfoto.Text = foto.FileName;
-            }
+            }*/
         }
         private void limparCampos()
         {
