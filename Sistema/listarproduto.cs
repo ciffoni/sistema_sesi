@@ -96,6 +96,7 @@ namespace Sistema
         
 private void selecionarClick(object sender, EventArgs e,string Id,string descrico,string preco)
         {
+
             //crie uma novo carrinho
             ItemCarrinho itemCarrinho = new ItemCarrinho();
             itemCarrinho.NomeProduto= descrico;
