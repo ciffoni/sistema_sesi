@@ -88,7 +88,7 @@ namespace Sistema
                 produtos.Controls.Add(selecionar);
                 //adicionar o produto ao painel
                 flowLayoutPanel1.Controls.Add(produtos);
-                //aterar o proximo regsitro
+                //alterar o proximo registro
                 y += 100;
                 x = 0;
             }
@@ -96,6 +96,7 @@ namespace Sistema
         
 private void selecionarClick(object sender, EventArgs e,string Id,string descrico,string preco)
         {
+            //crie uma novo carrinho
             ItemCarrinho itemCarrinho = new ItemCarrinho();
             itemCarrinho.NomeProduto= descrico;
             itemCarrinho.Quantidade = 1;
