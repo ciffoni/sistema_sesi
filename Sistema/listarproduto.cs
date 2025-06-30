@@ -57,7 +57,7 @@ namespace Sistema
                 //crio o label para o codigo
                 Label idproduto= new Label();
                 //pega a informação do 1 campo da tabela
-                idproduto.Text = "código: " + dados.Rows[registros][0].ToString();
+                idproduto.Text = dados.Rows[registros][0].ToString();
                 //adicionar i id ao painel
                 idproduto.Width = 100;
                 idproduto.Location = new Point(20, 52);
@@ -133,14 +133,21 @@ private void selecionarClick(object sender, EventArgs e,string Id,string descric
                 }
                 else
                 {
-                    // Se o produto não existe, adiciona um novo ItemCarrinho
-                    CarrinhoAtual.Add(new ItemCarrinho
+                    if (!string.IsNullOrEmpty(qtde))
                     {
-                        ProdutoId = produtoId,
-                        NomeProduto = descrico,
-                        PrecoUnitario = precoUnitario,
-                        Quantidade = Convert.ToInt32(qtde), // Primeira vez, quantidade é 1
-                    });
+                        // Se o produto não existe, adiciona um novo ItemCarrinho
+                        CarrinhoAtual.Add(new ItemCarrinho
+                        {
+                            ProdutoId = produtoId,
+                            NomeProduto = descrico,
+                            PrecoUnitario = precoUnitario,
+                            Quantidade = Convert.ToInt32(qtde), // Primeira vez, quantidade é 1
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("quantidade precisa definir o valor");
+                    }
                 }
             }
             else // O produto foi DESMARCADO
