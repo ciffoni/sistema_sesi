@@ -38,7 +38,7 @@
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 13);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(775, 425);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1246, 425);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // BtnComprar
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 508);
+            this.ClientSize = new System.Drawing.Size(1284, 508);
             this.Controls.Add(this.BtnComprar);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "listarproduto";

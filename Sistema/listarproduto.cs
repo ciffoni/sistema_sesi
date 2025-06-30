@@ -47,6 +47,8 @@ namespace Sistema
             {
                 //crio os paineis com o produtos
                 Panel produtos= new Panel();
+                produtos.BorderStyle = BorderStyle.FixedSingle;
+                produtos.BackColor = Color.LightBlue;
                 //defino a localização do painel
                 produtos.Location=new Point(x,y);
                 //defino a altura e largura
@@ -55,37 +57,44 @@ namespace Sistema
                 //crio o label para o codigo
                 Label idproduto= new Label();
                 //pega a informação do 1 campo da tabela
-                idproduto.Text = dados.Rows[registros][0].ToString();
+                idproduto.Text = "código: " + dados.Rows[registros][0].ToString();
                 //adicionar i id ao painel
-                idproduto.Width = 30;
+                idproduto.Width = 100;
+                idproduto.Location = new Point(20, 52);
                 Label descricao= new Label();
-                descricao.Location=new Point(20,50);
-                descricao.Text = dados.Rows[registros][1].ToString();
+                descricao.Location=new Point(20,75);
+                descricao.Width = 200;
+                descricao.Text ="Descrição: "+ dados.Rows[registros][1].ToString();
                 //criar o espaço para a foto
                 PictureBox foto= new PictureBox();
                 foto.Name = "foto";
                 foto.SizeMode = PictureBoxSizeMode.StretchImage;
                 foto.Image = Image.FromFile(dados.Rows[registros][2].ToString());
-                foto.Location= new Point(30,0);
+                foto.Location= new Point(35,0);
                 Label preco= new Label();
                 preco.Name = "preco";
                 preco.Text = dados.Rows[registros][3].ToString();
-                preco.Location = new Point(20, 85);
+                preco.Location = new Point(20, 100);
                 Label quantidade= new Label();
                 quantidade.Name = "quantidade";
-                quantidade.Text = dados.Rows[registros][4].ToString();
-                quantidade.Location = new Point(20, 120);
+                quantidade.Text = "estoque: "+ dados.Rows[registros][4].ToString();
+                quantidade.Location = new Point(20, 130);
+                TextBox qtde = new TextBox();
+                qtde.Name = "qtde";
+                qtde.Location = new Point(20, 190);
                 CheckBox selecionar= new CheckBox();
                 selecionar.Text = dados.Rows[registros][0].ToString();
-                selecionar.Location = new Point(20, 140);
-                selecionar.Click += new EventHandler((sender1, e1) => selecionarClick(sender1, e1, idproduto.Text,descricao.Text,preco.Text));
+                selecionar.Location = new Point(35, 160);
+                selecionar.Click += new EventHandler((sender1, e1) => selecionarClick(sender1, e1, idproduto.Text,descricao.Text,preco.Text,qtde.Text));
                 //adicionar os campos ao painel
+
                 produtos.Controls.Add(idproduto);
                 produtos.Controls.Add(foto);
                 produtos.Controls.Add(descricao);
                 produtos.Controls.Add(preco);
                 produtos.Controls.Add(quantidade);
                 produtos.Controls.Add(selecionar);
+                produtos.Controls.Add(qtde);
                 //adicionar o produto ao painel
                 flowLayoutPanel1.Controls.Add(produtos);
                 //alterar o proximo registro
@@ -94,9 +103,9 @@ namespace Sistema
             }
         }
         
-private void selecionarClick(object sender, EventArgs e,string Id,string descrico,string preco)
+private void selecionarClick(object sender, EventArgs e,string Id,string descrico,string preco, string qtde)
         {
-
+            /*
             //crie uma novo carrinho
             ItemCarrinho itemCarrinho = new ItemCarrinho();
             itemCarrinho.NomeProduto= descrico;
@@ -104,7 +113,55 @@ private void selecionarClick(object sender, EventArgs e,string Id,string descric
             itemCarrinho.PrecoUnitario = Convert.ToDecimal(preco);
             itemCarrinho.ProdutoId = Convert.ToInt32(Id);
             CarrinhoAtual.Add(itemCarrinho);
-       
+       */
+            // Converte os valores uma vez no início para evitar conversões repetidas
+            int produtoId = Convert.ToInt32(Id);
+            decimal precoUnitario = Convert.ToDecimal(preco);
+
+            // Obtém o CheckBox que disparou o evento
+            CheckBox cb = (CheckBox)sender;
+
+            if (cb.Checked) // O produto foi SELECIONADO (marcado)
+            {
+                // Tenta encontrar o item no carrinho
+                ItemCarrinho itemExistente = CarrinhoAtual.FirstOrDefault(item => item.ProdutoId == produtoId);
+
+                if (itemExistente != null)
+                {
+                    // Se o produto já existe, apenas incrementa a quantidade
+                    itemExistente.Quantidade++;
+                }
+                else
+                {
+                    // Se o produto não existe, adiciona um novo ItemCarrinho
+                    CarrinhoAtual.Add(new ItemCarrinho
+                    {
+                        ProdutoId = produtoId,
+                        NomeProduto = descrico,
+                        PrecoUnitario = precoUnitario,
+                        Quantidade = Convert.ToInt32(qtde), // Primeira vez, quantidade é 1
+                    });
+                }
+            }
+            else // O produto foi DESMARCADO
+            {
+                // Tenta encontrar o item no carrinho
+                ItemCarrinho itemExistente = CarrinhoAtual.FirstOrDefault(item => item.ProdutoId == produtoId);
+
+                if (itemExistente != null)
+                {
+                    // Decrementa a quantidade, se maior que 1
+                    if (itemExistente.Quantidade > 1)
+                    {
+                        itemExistente.Quantidade--;
+                    }
+                    else // Se a quantidade for 1, remove o item completamente do carrinho
+                    {
+                        CarrinhoAtual.Remove(itemExistente);
+                    }
+                }
+                // Se o item não existir no carrinho ao desmarcar, não faz nada (caso de erro ou já removido)
+            }
 
         }
         //retornando uma tabela

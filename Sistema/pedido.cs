@@ -1,22 +1,23 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics; // Para abrir o PDF automaticamente
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
+using static iText.StyledXmlParser.Css.Font.CssFontFace;
 using static Sistema.listarproduto;
-using System.IO;
-using System.Diagnostics; // Para abrir o PDF automaticamente
 using Font = System.Drawing.Font;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 using PageSize = iTextSharp.text.PageSize;
 namespace Sistema
 {
@@ -37,14 +38,11 @@ namespace Sistema
         }
         //criar o metodo obter dados do banco de dados
         // aplicar atributo ao metodo
-        public void GerarPdfNotaFiscal(int pedidoId, List<ItemCarrinho> itensDoCarrinho, decimal totalPedido)
+        public void GerarPdfNotaFiscal(int pedidoId, List<ItemCarrinho> itensDoCarrinho, decimal totalPedido,string nomecliente,string formapgto,string status)
         {
 
             string pastaDestinoPDF = Path.Combine(Application.StartupPath, "notafiscal");
-
-
-            string Caminhologo = Path.Combine(Application.StartupPath, "logo.png");
-
+            string pastalogo = Path.Combine(Application.StartupPath, "Imagens");
             // Verifica se a pasta existe, se não, cria
             if (!Directory.Exists(pastaDestinoPDF))
             {
@@ -60,43 +58,58 @@ namespace Sistema
 
                 PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminhoArquivoPdf, FileMode.Create));
                 doc.Open(); // Abre o documento
-               Font fonte = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
-                   ((System.Byte)(0)));
 
-                // --- Adicionar a Logo ---
-                if (File.Exists(Caminhologo))
+                // --- Início da Inclusão da Imagem ---
+
+                // 1. Caminho da imagem:
+                // Suponha que sua imagem (ex: "logo.png") esteja na pasta "Imagens"
+                // dentro do diretório de execução da aplicação.
+                string caminhoLogo = Path.Combine(pastalogo, "logo.png");
+
+                if (File.Exists(caminhoLogo))
                 {
-                    // 4. Carregar a imagem da logo
-                    System.Drawing.Image logo = System.Drawing.Image.FromFile(Caminhologo);
+                    // 2. Carrega a imagem
+                    iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(caminhoLogo);
 
-                    // 5. Ajustar o tamanho da logo (opcional, mas recomendado)
-                    // Exemplo: Redimensionar para uma largura de 100 pixels, mantendo a proporção
-                    logo.ScaleToFit(100f, 50f); // Largura, Altura Máxima
+                    // 3. Define a posição e/ou o tamanho da imagem
+                    // Exemplo 1: Redimensionar a imagem para uma largura e altura fixas
+                    logo.ScaleAbsolute(100f, 50f); // 100 pixels de largura, 50 pixels de altura
 
-                    // Ou definir uma escala percentual
-                    // logo.ScalePercent(50f); // 50% do tamanho original
+                    // Exemplo 2: Redimensionar proporcionalmente para caber em uma largura máxima
+                    // float maxWidth = 150f;
+                    // float scale = maxWidth / logo.Width;
+                    // logo.ScalePercent(scale * 100);
 
-                    // 6. Posicionar a logo
-                    // a) Posicionamento absoluto (coordenadas X, Y)
-                    // As coordenadas (0,0) estão no canto inferior esquerdo do PDF.
-                    // Ajuste os valores conforme a necessidade.
-                    logo.SetAbsolutePosition(document.Left, document.Top - logo.ScaledHeight); // Canto superior esquerdo
+                    // Posiciona a imagem. Exemplo: no canto superior esquerdo com margem.
+                    // A posição é em pontos (72 pontos = 1 polegada) a partir do canto inferior esquerdo da página.
+                    // doc.PageSize.Width/2 - logo.ScaledWidth/2 centralizaria horizontalmente
+                    // doc.PageSize.Height - logo.ScaledHeight - 20f posiciona 20 pontos da margem superior
+                    logo.SetAbsolutePosition(40f, doc.PageSize.Height - logo.ScaledHeight - 40f); // 40f da margem esquerda, 40f da margem superior
 
-                    // b) Ou adicionar a logo como um elemento do documento (ela se comporta como texto)
-                    // document.Add(logo); // Isso colocaria a logo no fluxo normal do texto
+                    // 4. Adiciona a imagem ao documento
+                    doc.Add(logo);
 
-                    // 7. Adicionar a logo ao documento
-                    // Se você usou SetAbsolutePosition, adicione diretamente ao writer
-                    writer.DirectContent.AddImage(logo);
+                    // Ajuste a margem superior para que o texto não sobreponha a imagem
+                    doc.SetMargins(doc.LeftMargin, doc.RightMargin, doc.TopMargin + logo.ScaledHeight + 20f, doc.BottomMargin);
+                    // Reabre para que as novas margens sejam aplicadas a partir de agora
+                    // (Note: SetMargins() afeta o conteúdo adicionado *depois* dela.
+                    // Para ter a imagem no topo e o texto logo abaixo, você pode adicionar a imagem,
+                    // e depois adicionar um "espaço" ou uma nova linha para empurrar o texto.
+                    // Ou usar uma tabela de uma célula para centralizar elementos no cabeçalho.)
 
-                    // Se você quiser que a logo apareça em todas as páginas (como um "template")
-                    // Isso é mais avançado e geralmente envolve usar PdfPageEventHelper
-                    // para desenhar a logo em OnEndPage.
                 }
                 else
                 {
-                    document.Add(new Paragraph("Erro: Arquivo de logo não encontrado em " + caminhoArquivoLogo));
+                    // Opcional: Avisar se a imagem não for encontrada
+                    MessageBox.Show($"O arquivo de logo não foi encontrado em: {caminhoLogo}", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                // --- Fim da Inclusão da Imagem ---
+
+
+
+                Font fonte = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
+                   ((System.Byte)(0)));
+
                 // Adiciona um título
                 Paragraph titulo = new Paragraph("NOTA FISCAL / RECIBO DE COMPRA");
                 titulo.Alignment = Element.ALIGN_CENTER;
@@ -107,7 +120,11 @@ namespace Sistema
                 doc.Add(new Paragraph($"Número do Pedido: {pedidoId}"));
                 doc.Add(new Paragraph($"Data: {DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}"));
                 doc.Add(new Paragraph(" "));
-
+                doc.Add(new Paragraph($"Cliente: {nomecliente}")); // Novo
+                doc.Add(new Paragraph($"Forma de Pagamento: {formapgto}")); // Novo
+                doc.Add(new Paragraph($"Status: {status}")); // Novo
+                doc.Add(new Paragraph(" "));
+                doc.Add(new Paragraph(" "));
                 // Tabela de Itens do Pedido
                 PdfPTable table = new PdfPTable(4); // 4 colunas: Produto, Qtd, Preço Unit, Subtotal
                 table.WidthPercentage = 100; // Ocupa 100% da largura da página
@@ -134,7 +151,7 @@ namespace Sistema
                 Paragraph total = new Paragraph($"TOTAL GERAL: {totalPedido.ToString("C2")}");
                 total.Alignment = Element.ALIGN_RIGHT;
                 doc.Add(total);
-
+                label1.Text = total.ToString();
                 doc.Close(); // Fecha e salva o documento
 
                 MessageBox.Show("Nota Fiscal gerada com sucesso!", "PDF Gerado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -281,7 +298,7 @@ namespace Sistema
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            GerarPdfNotaFiscal(idpedido, _itensDoCarrinho, _itensDoCarrinho.Sum(i => i.Subtotal));
+            GerarPdfNotaFiscal(idpedido, _itensDoCarrinho, _itensDoCarrinho.Sum(i => i.Subtotal),cboCliente.Text,cboforma.Text,cbostatus.Text);
 
             this.DialogResult = DialogResult.OK;
             this.Close();
