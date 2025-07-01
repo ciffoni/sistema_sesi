@@ -179,3 +179,4 @@ C:\Users\aluno\Documents\GitHub\sistema_sesi\Sistema\bin\Debug\Microsoft.Extensi
 C:\Users\aluno\Documents\GitHub\sistema_sesi\Sistema\bin\Debug\Newtonsoft.Json.xml
 C:\Users\aluno\Documents\GitHub\sistema_sesi\Sistema\bin\Debug\System.ValueTuple.xml
 C:\Users\aluno\Documents\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.CopyComplete
+C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\bin\Debug\QRCoder.dll

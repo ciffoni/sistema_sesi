@@ -38,10 +38,10 @@
             this.cadastrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbQRCode = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQRCode)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCliente
@@ -60,6 +60,7 @@
             this.cboforma.Name = "cboforma";
             this.cboforma.Size = new System.Drawing.Size(121, 24);
             this.cboforma.TabIndex = 7;
+            this.cboforma.SelectedIndexChanged += new System.EventHandler(this.cboforma_SelectedIndexChanged);
             // 
             // datapedido
             // 
@@ -127,26 +128,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(410, 188);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(344, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(0, 32);
             this.label1.TabIndex = 17;
-            this.label1.Text = "label1";
             // 
-            // pictureBox2
+            // pbQRCode
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(548, 169);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
+            this.pbQRCode.Location = new System.Drawing.Point(519, 47);
+            this.pbQRCode.Name = "pbQRCode";
+            this.pbQRCode.Size = new System.Drawing.Size(158, 111);
+            this.pbQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbQRCode.TabIndex = 19;
+            this.pbQRCode.TabStop = false;
             // 
             // pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 458);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbQRCode);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.cbostatus);
@@ -161,7 +163,7 @@
             this.Load += new System.EventHandler(this.pedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQRCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +179,6 @@
         private System.Windows.Forms.ComboBox cbostatus;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbQRCode;
     }
 }

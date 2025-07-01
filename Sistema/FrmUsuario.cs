@@ -29,7 +29,7 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para inserir as informações
-                string sql = "insert into usuario(nome,email,senha) values('" + txtNOme.Text + "','" + txtEmail.Text + "','" + txtSenha.Text + "')";
+                string sql = "insert into usuario(nome,email,senha,cargo) values('" + txtNOme.Text + "','" + txtEmail.Text + "','" + txtSenha.Text + "','" + cboCargo.Text +"')";
               //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
     //abrir o banco de dados
@@ -156,6 +156,7 @@ namespace Sistema
             txtNOme.Clear();
             txtEmail.Clear();
             txtSenha.Clear();
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -167,8 +168,8 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para atualizar as informações
-                string sql = "update usuario set nome='"  + txtNOme.Text + "',email='" + txtEmail.Text + "',senha='" + txtSenha.Text + "'" +
-                    "where id="+ Convert.ToInt32(txtid.Text);
+                string sql = "update usuario set nome='"  + txtNOme.Text + "',email='" + txtEmail.Text + "',senha='" + txtSenha.Text + "'" +", cargo = '" + cboCargo.Text + "'"+
+                    "where id=" + Convert.ToInt32(txtid.Text);
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 //abrir o banco de dados

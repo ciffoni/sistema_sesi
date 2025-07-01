@@ -41,7 +41,7 @@
             this.dadosUsuario = new System.Windows.Forms.DataGridView();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cboCargo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dadosUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,24 +156,29 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(71, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
+            this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Senha:";
+            this.label5.Text = "Cargo:";
             // 
-            // textBox1
+            // cboCargo
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 172);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 13;
+            this.cboCargo.FormattingEnabled = true;
+            this.cboCargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Cliente",
+            "Vendedor",
+            "Cozinha"});
+            this.cboCargo.Location = new System.Drawing.Point(138, 163);
+            this.cboCargo.Name = "cboCargo";
+            this.cboCargo.Size = new System.Drawing.Size(121, 24);
+            this.cboCargo.TabIndex = 13;
             // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dadosUsuario);
@@ -211,6 +216,6 @@
         private System.Windows.Forms.DataGridView dadosUsuario;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cboCargo;
     }
 }

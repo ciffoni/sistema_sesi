@@ -40,6 +40,10 @@
             this.fecharConexaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listarProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informaçãoSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +53,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivosToolStripMenuItem,
             this.cadastrarToolStripMenuItem,
-            this.ajudaToolStripMenuItem,
-            this.pedidoToolStripMenuItem1});
+            this.pedidoToolStripMenuItem1,
+            this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -59,6 +63,10 @@
             // 
             // arquivosToolStripMenuItem
             // 
+            this.arquivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backupToolStripMenuItem,
+            this.logarToolStripMenuItem,
+            this.sairToolStripMenuItem});
             this.arquivosToolStripMenuItem.Name = "arquivosToolStripMenuItem";
             this.arquivosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.arquivosToolStripMenuItem.Text = "Arquivos";
@@ -98,7 +106,8 @@
             // 
             this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.testarConexaoToolStripMenuItem,
-            this.fecharConexaoToolStripMenuItem});
+            this.fecharConexaoToolStripMenuItem,
+            this.informaçãoSistemaToolStripMenuItem});
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
@@ -132,6 +141,30 @@
             this.listarProdutosToolStripMenuItem.Text = "listar produtos";
             this.listarProdutosToolStripMenuItem.Click += new System.EventHandler(this.listarProdutosToolStripMenuItem_Click);
             // 
+            // logarToolStripMenuItem
+            // 
+            this.logarToolStripMenuItem.Name = "logarToolStripMenuItem";
+            this.logarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logarToolStripMenuItem.Text = "logar";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
+            // informaçãoSistemaToolStripMenuItem
+            // 
+            this.informaçãoSistemaToolStripMenuItem.Name = "informaçãoSistemaToolStripMenuItem";
+            this.informaçãoSistemaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.informaçãoSistemaToolStripMenuItem.Text = "Informação sistema";
+            // 
+            // backupToolStripMenuItem
+            // 
+            this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.backupToolStripMenuItem.Text = "Backup";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -164,6 +197,10 @@
         private System.Windows.Forms.ToolStripMenuItem fecharConexaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listarProdutosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informaçãoSistemaToolStripMenuItem;
     }
 }
 
