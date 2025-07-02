@@ -34,18 +34,12 @@ namespace Sistema
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
     //abrir o banco de dados
                 conexao.Open();
-            
-               
+                 
                 //se tiver vazio 
                 if (txtNOme.Text == "")
                 {
                     //alerta para o usuario mensagem verdadeira
                     MessageBox.Show("Nome está vazio!");
-                }
-                else
-                {
-                    // alerta para o usuario preenchido
-                    MessageBox.Show("campo preenchido!");
                 }
                 if (txtEmail.Text == "")
                     MessageBox.Show("email está vazio");
