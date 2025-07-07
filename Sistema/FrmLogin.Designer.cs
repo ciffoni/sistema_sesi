@@ -90,6 +90,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmLogin";
             this.Text = "Acessar o sistema";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

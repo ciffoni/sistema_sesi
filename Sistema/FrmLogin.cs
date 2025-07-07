@@ -86,5 +86,10 @@ namespace Sistema
                 MessageBox.Show("Erro :" + ex.Message);
             }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

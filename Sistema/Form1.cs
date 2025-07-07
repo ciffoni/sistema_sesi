@@ -169,6 +169,12 @@ namespace Sistema
         {
 
         }
+
+        private void cozinhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cozinha cozinha = new Cozinha();
+            cozinha.ShowDialog();
+        }
     }
 
 }
