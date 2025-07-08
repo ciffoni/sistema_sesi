@@ -175,6 +175,12 @@ namespace Sistema
             Cozinha cozinha = new Cozinha();
             cozinha.ShowDialog();
         }
+
+        private void fluxoDeCaixaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fluxocaixa fluxocaixa = new fluxocaixa();
+            fluxocaixa.ShowDialog();
+        }
     }
 
 }

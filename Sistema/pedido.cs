@@ -215,8 +215,8 @@ namespace Sistema
 
                 //criando o script sql para inserir as informações
                 // Criando o script SQL para inserir as informações com PARÂMETROS
-                string sql = "INSERT INTO pedido(idusuario,formapagamento,data_pedido,status) " +
-                             "VALUES(@usuario,@forma,@data,@status)";
+                string sql = "INSERT INTO pedido(idusuario,formapagamento,data_pedido,status,tipo,total) " +
+                             "VALUES(@usuario,@forma,@data,@status,'entrada',@total)";
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 // Adicionar os PARÂMETROS
@@ -224,7 +224,8 @@ namespace Sistema
                 comando.Parameters.AddWithValue("@forma", cboforma.Text);
                 comando.Parameters.AddWithValue("@data", datapedido.Value); // O tipo DateTime é passado corretamente
                 comando.Parameters.AddWithValue("@status", cbostatus.Text); // Boolean é passado corretamente
-        
+                comando.Parameters.AddWithValue("@total", totalPedido); 
+
                 //abrir o banco de dados
                 conexao.Open();
                 comando.ExecuteNonQuery();

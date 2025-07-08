@@ -152,6 +152,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -180,6 +181,12 @@
     </Compile>
     <Compile Include="Cozinha.Designer.cs">
       <DependentUpon>Cozinha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fluxocaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fluxocaixa.Designer.cs">
+      <DependentUpon>fluxocaixa.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -230,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cozinha.resx">
       <DependentUpon>Cozinha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fluxocaixa.resx">
+      <DependentUpon>fluxocaixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
