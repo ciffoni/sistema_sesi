@@ -68,7 +68,7 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para inserir as informações
-                string sql = "SELECT idpedido,idusuario, data_pedido,status FROM pedido WHERE status IN ('Novo', 'Andamento', 'Em Preparo') ORDER BY data_pedido ASC";
+                string sql = "SELECT idpedido,idusuario,data_pedido,status FROM pedido WHERE status IN ('Novo', 'Andamento', 'Em Preparo') ORDER BY data_pedido ASC";
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 //abrir o banco de dados
@@ -80,7 +80,7 @@ namespace Sistema
                 dvgPedidos.DataSource = dtPedidos;
                 // Ajustar colunas (opcional)
                 dvgPedidos.Columns["data_pedido"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
-                //      dvgPedidos.Columns["Total"].DefaultCellStyle.Format = "C2"; // Formato de moeda
+        //           dvgPedidos.Columns["total"].DefaultCellStyle.Format = "C2"; // Formato de moeda
                 // --- Lógica da Notificação Sonora ---
                 int quantidadeNovosPedidosAtuais = dtPedidos.AsEnumerable().Count(row => row.Field<string>("Status") == "Novo");
 
@@ -95,7 +95,7 @@ namespace Sistema
                 }
                 _quantidadeNovosPedidosAnterior = quantidadeNovosPedidosAtuais; // Atualiza o contador para a próxima verificação
                 // --- Fim da Lógica da Notificação Sonora ---
-                label1.Text = "Pedidos carregados.";
+                label1.Text = "Pedidos carregados." + _quantidadeNovosPedidosAnterior.ToString();
             }
             catch (Exception ex)
             {
@@ -183,7 +183,7 @@ namespace Sistema
                     dgvItensPedido.DataSource = dtItens;
 
                     // Ajustar colunas (opcional)
-                    dgvItensPedido.Columns["total"].DefaultCellStyle.Format = "C2";
+//                    dgvItensPedido.Columns["itenspedido.total"].DefaultCellStyle.Format = "C2";
                     //dgvItensPedido.Columns["Subtotal"].DefaultCellStyle.Format = "C2";
                 }
                 catch (Exception ex)//

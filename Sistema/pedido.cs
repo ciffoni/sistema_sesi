@@ -284,7 +284,7 @@ namespace Sistema
             cboforma.Items.Add("dinheiro");
             cboforma.Items.Add("PIX");
             cboforma.Items.Add("Cartão credito");
-            cbostatus.Items.Add("andamento");
+            cbostatus.Items.Add("Novo");
             cbostatus.Items.Add("concluido");
             cbostatus.Items.Add("cancelado");
         }

@@ -161,7 +161,7 @@ CREATE TABLE `usuario` (
   `senha` varchar(255) DEFAULT NULL,
   `cargo` varchar(60) NOT NULL,
   `Ativo` tinyint(1) DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Despejando dados para a tabela `usuario`

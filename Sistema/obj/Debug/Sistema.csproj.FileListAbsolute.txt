@@ -183,3 +183,4 @@ C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Deb
 C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.csproj.Up2Date
 C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.exe
 C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.pdb
+C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.exe.config
