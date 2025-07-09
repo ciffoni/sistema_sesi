@@ -25,6 +25,7 @@ namespace Sistema
         {
             try
             {
+
                 //caminho de configuração do servidor
                 string data_source = "datasource=localhost;username=root;password='';database=sistema";
                 ///abrinddo a cenexao
@@ -34,24 +35,39 @@ namespace Sistema
               //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 //abrir o banco de dados
-                comando.Parameters.AddWithValue("@nome", txtNOme.Text);
-                comando.Parameters.AddWithValue("@email", txtEmail.Text);
-                comando.Parameters.AddWithValue("@cargo", cboCargo.Text);
-                comando.Parameters.AddWithValue("@senha", BCrypt.Net.BCrypt.HashPassword( txtSenha.Text));
-
+                string senhaOriginal=txtSenha.Text.Trim();
+                string senhahash = BCrypt.Net.BCrypt.HashPassword(senhaOriginal);
+                comando.Parameters.AddWithValue("@nome", txtNOme.Text.Trim());
+                comando.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                comando.Parameters.AddWithValue("@cargo", cboCargo.Text.Trim());
+                comando.Parameters.AddWithValue("@senha",senhahash);
+                label6.Text = senhahash;
+                
+                lblMensagemErro.Text = senhahash.Length.ToString();
                 conexao.Open();
                  
                 //se tiver vazio 
-                if (txtNOme.Text == "")
+                if (string.IsNullOrEmpty(txtNOme.Text))
                 {
                     //alerta para o usuario mensagem verdadeira
                     MessageBox.Show("Nome está vazio!");
+                    lblMensagemErro.Text = "Por favor, preencha o nome.";
+                    return;
                 }
-                if (txtEmail.Text == "")
+                if (string.IsNullOrEmpty(txtEmail.Text))
+                {
                     MessageBox.Show("email está vazio");
+                    lblMensagemErro.Text = "Por favor, preencha o e-mail.";
+                    return;
+                }
 
-                if (txtSenha.Text == "")
+                if (string.IsNullOrEmpty(txtSenha.Text))
+                {
                     MessageBox.Show("Senha está vazio");
+                    lblMensagemErro.Text = "Por favor, preencha a senha.";
+                    return;
+
+                }
 
                 if(txtSenha.Text !="" && txtEmail.Text!="" && txtNOme.Text != "")
                 {
