@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 // incluir a biblioteca do mysql
 using MySql.Data.MySqlClient;
+using BCrypt.Net;
 namespace Sistema
 {
     public partial class FrmUsuario : Form
@@ -29,10 +30,15 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para inserir as informações
-                string sql = "insert into usuario(nome,email,senha,cargo) values('" + txtNOme.Text + "','" + txtEmail.Text + "','" + txtSenha.Text + "','" + cboCargo.Text +"')";
+                string sql = "insert into usuario(nome,email,senha,cargo) values(@nome,@email,@senha,@cargo)";
               //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
-    //abrir o banco de dados
+                //abrir o banco de dados
+                comando.Parameters.AddWithValue("@nome", txtNOme.Text);
+                comando.Parameters.AddWithValue("@email", txtEmail.Text);
+                comando.Parameters.AddWithValue("@cargo", cboCargo.Text);
+                comando.Parameters.AddWithValue("@senha", BCrypt.Net.BCrypt.HashPassword( txtSenha.Text));
+
                 conexao.Open();
                  
                 //se tiver vazio 
@@ -162,11 +168,16 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para atualizar as informações
-                string sql = "update usuario set nome='"  + txtNOme.Text + "',email='" + txtEmail.Text + "',senha='" + txtSenha.Text + "'" +", cargo = '" + cboCargo.Text + "'"+
+                string sql = "update usuario set nome=@nome,email=@email,senha=@senha, cargo = @cargo"+
                     "where id=" + Convert.ToInt32(txtid.Text);
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 //abrir o banco de dados
+                comando.Parameters.AddWithValue("@nome", txtNOme.Text);
+                comando.Parameters.AddWithValue("@email", txtEmail.Text);
+                comando.Parameters.AddWithValue("@cargo", cboCargo.Text);
+                comando.Parameters.AddWithValue("@senha", BCrypt.Net.BCrypt.HashPassword(txtSenha.Text));
+
                 conexao.Open();
                 //se tiver vazio 
                 if (txtNOme.Text == "")

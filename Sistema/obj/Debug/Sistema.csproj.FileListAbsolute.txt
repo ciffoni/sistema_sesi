@@ -183,3 +183,5 @@ C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\bin\Deb
 C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.FrmLogin.resources
 C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.Cozinha.resources
 C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\obj\Debug\Sistema.fluxocaixa.resources
+C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\pcbr4\OneDrive\Favoritos\Documentos\GitHub\sistema_sesi\Sistema\bin\Debug\BCrypt.Net-Core.pdb
