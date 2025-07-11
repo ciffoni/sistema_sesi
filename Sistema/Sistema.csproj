@@ -178,7 +178,15 @@
       <DependentUpon>carrinho.cs</DependentUpon>
     </Compile>
     <Compile Include="classe\conexao.cs" />
+    <Compile Include="classe\Configuracao.Helper.cs" />
+    <Compile Include="classe\Localizacao.cs" />
     <Compile Include="classe\SessaoUsuario.cs" />
+    <Compile Include="Configuracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracao.Designer.cs">
+      <DependentUpon>Configuracao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cozinha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,14 +246,26 @@
     <EmbeddedResource Include="carrinho.resx">
       <DependentUpon>carrinho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Configuracao.en-US.resx">
+      <DependentUpon>Configuracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracao.resx">
+      <DependentUpon>Configuracao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cozinha.resx">
       <DependentUpon>Cozinha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fluxocaixa.resx">
       <DependentUpon>fluxocaixa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.en-US.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.en-US.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

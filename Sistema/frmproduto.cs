@@ -1,6 +1,6 @@
 ﻿using iText.StyledXmlParser.Jsoup.Nodes;
 using MySql.Data.MySqlClient;
-using MySql.Data.MySqlClient;
+using Sistema.classe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -216,6 +216,10 @@ namespace Sistema
         private void frmproduto_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = obterdados();
+            // Aplica o estilo padrão para o cabeçalho e linhas
+           
+            ConfiguracaoHelper.AplicarEstiloCabecalhoPadrao(dataGridView1);
+            ConfiguracaoHelper.AplicarEstiloLinhasPadrao(dataGridView1);
         }
         public DataTable obterdados()
         {

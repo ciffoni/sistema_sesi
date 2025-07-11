@@ -37,6 +37,7 @@ namespace Sistema
         {
             _itensDoCarrinho = carrinhoRecebido; // Armazena a lista recebida
              InitializeComponent();
+            AplicarEstiloCabecalhoDataGridView();
         }
         //criar o metodo obter dados do banco de dados
         // aplicar atributo ao metodo
@@ -188,6 +189,33 @@ namespace Sistema
             conexao.Close();
             return dt;
 
+        }
+        private void AplicarEstiloCabecalhoDataGridView()
+        {
+            // Exemplo para um DataGridView chamado 'dgvPedidos'
+
+            // 1. Cor de Fundo do Cabeçalho
+            dgvCarrinho.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkBlue;
+
+            // 2. Cor do Texto do Cabeçalho
+            dgvCarrinho.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            // 3. Fonte do Cabeçalho
+            dgvCarrinho.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // 4. Alinhamento do Texto no Cabeçalho
+            dgvCarrinho.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Opcional: Desabilitar o estilo visual do Windows para ver a cor de fundo personalizada
+            // Em alguns casos, pode ser necessário para que o BackColor funcione perfeitamente.
+            dgvCarrinho.EnableHeadersVisualStyles = false;
+
+            // Outras propriedades úteis:
+            // Altura do cabeçalho
+            // dgvPedidos.ColumnHeadersHeight = 30;
+
+            // Borda do cabeçalho (se quiser tirar ou mudar a cor)
+            // dgvPedidos.BorderStyle = BorderStyle.None;
         }
         private void button1_Click(object sender, EventArgs e)
         {

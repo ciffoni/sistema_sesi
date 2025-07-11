@@ -10,6 +10,7 @@ using System.Windows.Forms;
 // incluir a biblioteca do mysql
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
+using Sistema.classe;
 namespace Sistema
 {
     public partial class FrmUsuario : Form
@@ -41,9 +42,9 @@ namespace Sistema
                 comando.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                 comando.Parameters.AddWithValue("@cargo", cboCargo.Text.Trim());
                 comando.Parameters.AddWithValue("@senha",senhahash);
-                label6.Text = senhahash;
+            //    label6.Text = senhahash;
                 
-                lblMensagemErro.Text = senhahash.Length.ToString();
+              //  lblMensagemErro.Text = senhahash.Length.ToString();
                 conexao.Open();
                  
                 //se tiver vazio 
@@ -88,6 +89,13 @@ namespace Sistema
         {
             //chama os dados da consulta para montar no datagridview
             dadosUsuario.DataSource = obterdados();
+            // Aplica o estilo padrão para o cabeçalho e linhas
+            ConfiguracaoHelper.AplicarEstiloCabecalhoPadrao(dadosUsuario);
+            ConfiguracaoHelper.AplicarEstiloLinhasPadrao(dadosUsuario);
+            chkAtivo.Visible = false;
+            // Se tiver outros DataGridViews no formulário, aplique também:
+            // DataGridViewHelper.AplicarEstiloCabecalhoPadrao(dgvItensPedido);
+            // DataGridViewHelper.AplicarEstiloLinhasPadrao(dgvItensPedido);
         }
 
         // criar um metodo para pesquisar as informações
@@ -164,6 +172,14 @@ namespace Sistema
             txtNOme.Text = dadosUsuario.Rows[e.RowIndex].Cells["nome"].Value.ToString();
             txtEmail.Text = dadosUsuario.Rows[e.RowIndex].Cells["email"].Value.ToString() ;
             txtSenha.Text = dadosUsuario.Rows[e.RowIndex].Cells["senha"].Value.ToString() ;
+            cboCargo.Text= dadosUsuario.Rows[e.RowIndex].Cells["cargo"].Value.ToString();
+            bool ativo = Convert.ToBoolean(dadosUsuario.Rows[e.RowIndex].Cells["ativo"].Value.ToString());
+            chkAtivo.Visible = true;
+            if (ativo==true)
+                chkAtivo.Checked = true;
+            else
+                chkAtivo.Checked = true;
+
         }
         //metodo limpar campos
         private void limparCampos()
@@ -184,7 +200,7 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para atualizar as informações
-                string sql = "update usuario set nome=@nome,email=@email,senha=@senha, cargo = @cargo"+
+                string sql = "update usuario set nome=@nome,email=@email,senha=@senha, cargo = @cargo, ativo=@ativo"+
                     "where id=" + Convert.ToInt32(txtid.Text);
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
@@ -193,6 +209,7 @@ namespace Sistema
                 comando.Parameters.AddWithValue("@email", txtEmail.Text);
                 comando.Parameters.AddWithValue("@cargo", cboCargo.Text);
                 comando.Parameters.AddWithValue("@senha", BCrypt.Net.BCrypt.HashPassword(txtSenha.Text));
+                comando.Parameters.AddWithValue("@senha", chkAtivo.Checked);
 
                 conexao.Open();
                 //se tiver vazio 

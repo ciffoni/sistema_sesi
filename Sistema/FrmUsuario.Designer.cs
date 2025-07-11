@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,167 +43,114 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cboCargo = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblMensagemErro = new System.Windows.Forms.Label();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dadosUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 57);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "nome:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 89);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "E-mail:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 126);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Senha:";
             // 
             // txtNOme
             // 
-            this.txtNOme.Location = new System.Drawing.Point(138, 57);
+            resources.ApplyResources(this.txtNOme, "txtNOme");
             this.txtNOme.Name = "txtNOme";
-            this.txtNOme.Size = new System.Drawing.Size(100, 22);
-            this.txtNOme.TabIndex = 3;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(138, 86);
+            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 22);
-            this.txtEmail.TabIndex = 4;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(138, 125);
+            resources.ApplyResources(this.txtSenha, "txtSenha");
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(100, 22);
-            this.txtSenha.TabIndex = 5;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(330, 21);
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrar.TabIndex = 6;
-            this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 26);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "codigo:";
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(330, 70);
+            resources.ApplyResources(this.btnExcluir, "btnExcluir");
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 8;
-            this.btnExcluir.Text = "excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(138, 19);
+            resources.ApplyResources(this.txtid, "txtid");
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(100, 22);
-            this.txtid.TabIndex = 9;
             // 
             // dadosUsuario
             // 
             this.dadosUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dadosUsuario.Location = new System.Drawing.Point(71, 209);
+            resources.ApplyResources(this.dadosUsuario, "dadosUsuario");
             this.dadosUsuario.Name = "dadosUsuario";
-            this.dadosUsuario.RowHeadersWidth = 51;
             this.dadosUsuario.RowTemplate.Height = 24;
-            this.dadosUsuario.Size = new System.Drawing.Size(656, 150);
-            this.dadosUsuario.TabIndex = 10;
             this.dadosUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosUsuario_CellContentClick);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(330, 121);
+            resources.ApplyResources(this.btnEditar, "btnEditar");
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 11;
-            this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 172);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Cargo:";
             // 
             // cboCargo
             // 
             this.cboCargo.FormattingEnabled = true;
             this.cboCargo.Items.AddRange(new object[] {
-            "Gerente",
-            "Cliente",
-            "Vendedor",
-            "Cozinha"});
-            this.cboCargo.Location = new System.Drawing.Point(138, 163);
+            resources.GetString("cboCargo.Items"),
+            resources.GetString("cboCargo.Items1"),
+            resources.GetString("cboCargo.Items2"),
+            resources.GetString("cboCargo.Items3")});
+            resources.ApplyResources(this.cboCargo, "cboCargo");
             this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(121, 24);
-            this.cboCargo.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(480, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 29);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "label6";
             // 
             // lblMensagemErro
             // 
-            this.lblMensagemErro.AutoSize = true;
-            this.lblMensagemErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblMensagemErro, "lblMensagemErro");
             this.lblMensagemErro.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagemErro.Location = new System.Drawing.Point(330, 163);
             this.lblMensagemErro.Name = "lblMensagemErro";
-            this.lblMensagemErro.Size = new System.Drawing.Size(141, 29);
-            this.lblMensagemErro.TabIndex = 15;
-            this.lblMensagemErro.Text = "mensagem";
+            // 
+            // chkAtivo
+            // 
+            resources.ApplyResources(this.chkAtivo, "chkAtivo");
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
             // 
             // FrmUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.lblMensagemErro);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnEditar);
@@ -218,7 +166,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmUsuario";
-            this.Text = "Cadastrar Usuário";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dadosUsuario)).EndInit();
             this.ResumeLayout(false);
@@ -242,7 +189,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboCargo;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblMensagemErro;
+        private System.Windows.Forms.CheckBox chkAtivo;
     }
 }

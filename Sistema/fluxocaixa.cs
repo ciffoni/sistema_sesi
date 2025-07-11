@@ -81,8 +81,8 @@ namespace Sistema
         {
             DataTable dtMovimentacoes = new DataTable();
 
-            using (MySqlConnection conexao = new MySqlConnection(data_source))
-            {
+            conexao = new MySqlConnection(data_source);
+          
                 try
                 {
                     conexao.Open();
@@ -120,7 +120,7 @@ namespace Sistema
                     MessageBox.Show($"Erro ao gerar relatório: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        
             private void ProcessarDadosParaGrafico(DataTable dados)
         {
             // Limpa os dados antigos do gráfico

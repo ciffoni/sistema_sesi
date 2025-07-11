@@ -58,7 +58,15 @@ namespace Sistema
             timerAtualizacao.Tick += (s, e) => CarregarpedidosPendentes(true); // Passa 'true' para indicar que é uma atualização automática
             timerAtualizacao.Start();
         }
-
+        private void AplicarEstiloCabecalhoDataGridView()
+        {
+            // ... (código do método do exemplo anterior) ...
+            dvgPedidos.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkBlue;
+            dvgPedidos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dvgPedidos.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dvgPedidos.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dvgPedidos.EnableHeadersVisualStyles = false;
+        }
         private void CarregarpedidosPendentes(bool isAutomaticUpdate)
         {
             try
@@ -68,7 +76,7 @@ namespace Sistema
                 ///abrinddo a cenexao
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para inserir as informações
-                string sql = "SELECT idpedido,idusuario,data_pedido,status FROM pedido WHERE status IN ('Novo', 'Andamento', 'Em Preparo') ORDER BY data_pedido ASC";
+                string sql = "SELECT idpedido,idusuario,data_pedido,status,total FROM pedido WHERE status IN ('Novo', 'Andamento', 'Em Preparo') ORDER BY data_pedido ASC";
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 //abrir o banco de dados
@@ -80,7 +88,7 @@ namespace Sistema
                 dvgPedidos.DataSource = dtPedidos;
                 // Ajustar colunas (opcional)
                 dvgPedidos.Columns["data_pedido"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
-        //           dvgPedidos.Columns["total"].DefaultCellStyle.Format = "C2"; // Formato de moeda
+                dvgPedidos.Columns["total"].DefaultCellStyle.Format = "C2"; // Formato de moeda
                 // --- Lógica da Notificação Sonora ---
                 int quantidadeNovosPedidosAtuais = dtPedidos.AsEnumerable().Count(row => row.Field<string>("Status") == "Novo");
 
@@ -111,6 +119,7 @@ namespace Sistema
         {
 
              CarregarpedidosPendentes(false);
+            AplicarEstiloCabecalhoDataGridView();
         }
 
         private void btnAtualizarLista_Click(object sender, EventArgs e)
@@ -183,7 +192,7 @@ namespace Sistema
                     dgvItensPedido.DataSource = dtItens;
 
                     // Ajustar colunas (opcional)
-//                    dgvItensPedido.Columns["itenspedido.total"].DefaultCellStyle.Format = "C2";
+                    dgvItensPedido.Columns["total"].DefaultCellStyle.Format = "C2";
                     //dgvItensPedido.Columns["Subtotal"].DefaultCellStyle.Format = "C2";
                 }
                 catch (Exception ex)//
@@ -237,13 +246,43 @@ namespace Sistema
         }
         private void dgvPedidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // Certifica-se de que estamos na coluna correta (a coluna "Status")
-            // e que não é a linha do cabeçalho
-            if (dvgPedidos.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
+            // Verifica se a linha é válida (não é o cabeçalho nem uma linha vazia)
+            if (e.RowIndex < 0 || e.RowIndex == dvgPedidos.NewRowIndex)
             {
-                string status = e.Value?.ToString();
-                Color backColor = dvgPedidos.DefaultCellStyle.BackColor; // Cor padrão
-                Color foreColor = dvgPedidos.DefaultCellStyle.ForeColor; // Cor padrão
+                return;
+            }
+
+            // --- Lógica para o problema do "Valor Formatado" ---
+            // Esta parte é uma *sugestão* se o erro estiver na coluna de valor.
+            // Você precisa adaptar o nome da coluna para a sua coluna de valor (ex: "ValorTotal").
+            if (dvgPedidos.Columns[e.ColumnIndex].Name == "total" && e.Value != null)
+            {
+                if (decimal.TryParse(e.Value.ToString(), System.Globalization.NumberStyles.Currency,
+                                     System.Globalization.CultureInfo.GetCultureInfo("pt-BR"), out decimal valorNumerico))
+                {
+                    // O valor é um número válido, formata para exibição
+                    e.Value = valorNumerico.ToString("C2", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
+                    e.FormattingApplied = true;
+                }
+                else
+                {
+                    // Se não for um número válido, você pode definir um valor padrão ou
+                    // logar o erro. Por exemplo, exibir "Inválido".
+                    e.Value = "Erro no Valor";
+                    e.FormattingApplied = true;
+                }
+            }
+            // --- Fim da lógica para o problema do "Valor Formatado" ---
+
+
+            // --- Lógica de Formatação de Cores para a Coluna "Status" ---
+            // Aplica a formatação de cores apenas se estivermos na coluna "status"
+            if (dvgPedidos.Columns[e.ColumnIndex].Name == "status")
+            {
+                string status = e.Value?.ToString(); // e.Value já terá o valor formatado se a lógica acima foi aplicada
+                Color backColor = dvgPedidos.DefaultCellStyle.BackColor;
+                Color foreColor = dvgPedidos.DefaultCellStyle.ForeColor;
+
                 switch (status)
                 {
                     case "Novo":
@@ -266,13 +305,25 @@ namespace Sistema
                         backColor = Color.DarkGray;
                         foreColor = Color.White;
                         break;
+                    // Adicione um default para status desconhecidos, se necessário
+                    default:
+                        backColor = dvgPedidos.DefaultCellStyle.BackColor; // Mantém a cor padrão
+                        foreColor = dvgPedidos.DefaultCellStyle.ForeColor; // Mantém a cor padrão
+                        break;
                 }
+
                 // Aplica a cor à linha inteira
+                // ATENÇÃO: Ao fazer isso, você sobrescreve as cores de todas as células da linha.
+                // Se você quiser colorir *apenas* a célula de status, remova as linhas abaixo
+                // e aplique a cor diretamente em `e.CellStyle.BackColor` e `e.CellStyle.ForeColor`.
                 dvgPedidos.Rows[e.RowIndex].DefaultCellStyle.BackColor = backColor;
                 dvgPedidos.Rows[e.RowIndex].DefaultCellStyle.ForeColor = foreColor;
-                // É importante definir e.FormattingApplied = true; para evitar que o DataGridView
-                // tente formatar a célula novamente com seu estilo padrão.
-                e.FormattingApplied = true;
+
+                // É importante definir e.FormattingApplied = true SOMENTE se você alterou o e.Value
+                // ou se quer que a formatação padrão do DataGridView seja ignorada para esta célula.
+                // Se você só está mudando o estilo da linha, não precisa setar.
+                // Se você mudou o e.Value na parte de "Valor Total", então sim, e.FormattingApplied = true; é essencial.
+                // Neste caso, deixamos a lógica de e.FormattingApplied = true na parte do "Valor Total".
             }
         }
     }

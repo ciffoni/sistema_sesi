@@ -157,7 +157,7 @@ namespace Sistema
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void backupToolStripMenuItem_Click(object sender, EventArgs e)
@@ -180,6 +180,12 @@ namespace Sistema
         {
             fluxocaixa fluxocaixa = new fluxocaixa();
             fluxocaixa.ShowDialog();
+        }
+
+        private void configuraçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Configuracao configuracao = new Configuracao();
+            configuracao.ShowDialog();
         }
     }
 

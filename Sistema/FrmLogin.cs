@@ -28,11 +28,15 @@ namespace Sistema
                 //verificar se os campos foram preenchidos
                 if (txtEmail.Text == "")
                 {
+                    lblMensagemErro.Text = "E-mail está vazia!";
                     MessageBox.Show("E-mail está vazia!");
+                    return;
                 }
                 if (txtSenha.Text == "")
                 {
+                    lblMensagemErro.Text = "Senha está vazio";
                     MessageBox.Show("Senha está vazio");
+                    return;
                 }
                 //caminho de configuração do servidor
                 string data_source = "datasource=localhost;username=root;password='';database=sistema";
@@ -40,7 +44,7 @@ namespace Sistema
                 conexao = new MySqlConnection(data_source);
                 //criando o script sql para inserir as informações
                 // Criando o script SQL para inserir as informações com PARÂMETROS
-                string sql = "SELECT  id,nome,email,cargo,senha from usuario " +
+                string sql = "SELECT  id,nome,email,cargo,senha,Ativo from usuario " +
                              "where email=@email";
                 //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
@@ -69,7 +73,13 @@ namespace Sistema
                         string senhahash = reader["senha"].ToString();
                         SessaoUsuario.id = Convert.ToInt32(reader["id"]);
                         // Ou passar para o formulário principal
+                        bool usuarioAtivo = Convert.ToBoolean(reader["Ativo"].ToString());
 
+                        if (!usuarioAtivo)
+                        {
+                            lblMensagemErro.Text = "Sua conta está desativada. Entre em contato com o administrador.";
+                            return;
+                        }
                         //FrmPrincipal principal = new FrmPrincipal();
                         //principal.Show();
 

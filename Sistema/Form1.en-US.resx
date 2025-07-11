@@ -117,70 +117,63 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="configuraçãoToolStripMenuItem.Text" xml:space="preserve">
+    <value>configuration</value>
+  </data>
+  <data name="logarToolStripMenuItem.Text" xml:space="preserve">
+    <value>log in</value>
+  </data>
+  <data name="sairToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pedidoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 24</value>
+  <data name="arquivosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 26</value>
   </data>
-  <data name="&gt;&gt;produtoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="usuárioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="usuárioToolStripMenuItem.Text" xml:space="preserve">
+    <value>User</value>
   </data>
-  <data name="&gt;&gt;pedidoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="produtoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="toolStripStatusLabel2.Text" xml:space="preserve">
-    <value>toolStripStatusLabel2</value>
+  <data name="produtoToolStripMenuItem.Text" xml:space="preserve">
+    <value>product</value>
   </data>
-  <data name="&gt;&gt;fecharConexaoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pedidoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;backupToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cadastrarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 26</value>
+  </data>
+  <data name="cadastrarToolStripMenuItem.Text" xml:space="preserve">
+    <value>register</value>
+  </data>
+  <data name="listarProdutosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
   <data name="listarPedidosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 26</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="sairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
-  </data>
-  <data name="logarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 28</value>
-  </data>
-  <data name="&gt;&gt;pedidoToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ajudaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ajuda</value>
-  </data>
-  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 20</value>
   </data>
   <data name="cozinhaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 26</value>
+    <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;pedidoToolStripMenuItem1.Name" xml:space="preserve">
-    <value>pedidoToolStripMenuItem1</value>
+  <data name="pedidoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 26</value>
   </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="pedidoToolStripMenuItem1.Text" xml:space="preserve">
+    <value>order</value>
   </data>
-  <data name="&gt;&gt;sairToolStripMenuItem.Name" xml:space="preserve">
-    <value>sairToolStripMenuItem</value>
+  <data name="relatórioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 26</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="ajudaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 26</value>
   </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 424</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 30</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2079,272 +2072,4 @@
         AAAAAAAAAP//AAD//wAA//8AAP//AAA=
 </value>
   </data>
-  <data name="relatórioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 24</value>
-  </data>
-  <data name="&gt;&gt;configuraçãoToolStripMenuItem.Name" xml:space="preserve">
-    <value>configuraçãoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;fluxoDeCaixaToolStripMenuItem.Name" xml:space="preserve">
-    <value>fluxoDeCaixaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;informaçãoSistemaToolStripMenuItem.Name" xml:space="preserve">
-    <value>informaçãoSistemaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;logarToolStripMenuItem.Name" xml:space="preserve">
-    <value>logarToolStripMenuItem</value>
-  </data>
-  <data name="fecharConexaoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="listarProdutosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 26</value>
-  </data>
-  <data name="&gt;&gt;relatórioToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="arquivosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Sistema de gestão </value>
-  </data>
-  <data name="fecharConexaoToolStripMenuItem.Text" xml:space="preserve">
-    <value>fechar conexao</value>
-  </data>
-  <data name="sairToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sair</value>
-  </data>
-  <data name="testarConexaoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="ajudaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 24</value>
-  </data>
-  <data name="&gt;&gt;cadastrarToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;backupToolStripMenuItem.Name" xml:space="preserve">
-    <value>backupToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="listarPedidosToolStripMenuItem.Text" xml:space="preserve">
-    <value>listar pedidos</value>
-  </data>
-  <data name="&gt;&gt;listarPedidosToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sairToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fecharConexaoToolStripMenuItem.Name" xml:space="preserve">
-    <value>fecharConexaoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;testarConexaoToolStripMenuItem.Name" xml:space="preserve">
-    <value>testarConexaoToolStripMenuItem</value>
-  </data>
-  <data name="pedidoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pedido</value>
-  </data>
-  <data name="cadastrarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
-  </data>
-  <data name="&gt;&gt;informaçãoSistemaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pedidoToolStripMenuItem1.Text" xml:space="preserve">
-    <value>pedido</value>
-  </data>
-  <data name="usuárioToolStripMenuItem.Text" xml:space="preserve">
-    <value>Usuário</value>
-  </data>
-  <data name="fluxoDeCaixaToolStripMenuItem.Text" xml:space="preserve">
-    <value>fluxo de caixa</value>
-  </data>
-  <data name="&gt;&gt;arquivosToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ajudaToolStripMenuItem.Name" xml:space="preserve">
-    <value>ajudaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;usuárioToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listarProdutosToolStripMenuItem.Name" xml:space="preserve">
-    <value>listarProdutosToolStripMenuItem</value>
-  </data>
-  <data name="configuraçãoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Configuração</value>
-  </data>
-  <data name="informaçãoSistemaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Informação sistema</value>
-  </data>
-  <data name="&gt;&gt;arquivosToolStripMenuItem.Name" xml:space="preserve">
-    <value>arquivosToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ajudaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="logarToolStripMenuItem.Text" xml:space="preserve">
-    <value>logar</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="configuraçãoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="produtoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Produto</value>
-  </data>
-  <data name="cadastrarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cadastrar</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cadastrarToolStripMenuItem.Name" xml:space="preserve">
-    <value>cadastrarToolStripMenuItem</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="informaçãoSistemaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listarProdutosToolStripMenuItem.Text" xml:space="preserve">
-    <value>listar produtos</value>
-  </data>
-  <data name="arquivosToolStripMenuItem.Text" xml:space="preserve">
-    <value>Arquivos</value>
-  </data>
-  <data name="relatórioToolStripMenuItem.Text" xml:space="preserve">
-    <value>relatório</value>
-  </data>
-  <data name="&gt;&gt;configuraçãoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 26</value>
-  </data>
-  <data name="&gt;&gt;cozinhaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="testarConexaoToolStripMenuItem.Text" xml:space="preserve">
-    <value>testar conexao abrir</value>
-  </data>
-  <data name="&gt;&gt;cozinhaToolStripMenuItem.Name" xml:space="preserve">
-    <value>cozinhaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;relatórioToolStripMenuItem.Name" xml:space="preserve">
-    <value>relatórioToolStripMenuItem</value>
-  </data>
-  <data name="pedidoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 26</value>
-  </data>
-  <data name="&gt;&gt;testarConexaoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FrmPrincipal</value>
-  </data>
-  <data name="backupToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="&gt;&gt;pedidoToolStripMenuItem.Name" xml:space="preserve">
-    <value>pedidoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;produtoToolStripMenuItem.Name" xml:space="preserve">
-    <value>produtoToolStripMenuItem</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
-  </data>
-  <data name="cozinhaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cozinha</value>
-  </data>
-  <data name="usuárioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 26</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listarProdutosToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="produtoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 26</value>
-  </data>
-  <data name="&gt;&gt;logarToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fluxoDeCaixaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
-  </data>
-  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 20</value>
-  </data>
-  <data name="&gt;&gt;usuárioToolStripMenuItem.Name" xml:space="preserve">
-    <value>usuárioToolStripMenuItem</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;fluxoDeCaixaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listarPedidosToolStripMenuItem.Name" xml:space="preserve">
-    <value>listarPedidosToolStripMenuItem</value>
-  </data>
-  <data name="backupToolStripMenuItem.Text" xml:space="preserve">
-    <value>Backup</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel2.Name" xml:space="preserve">
-    <value>toolStripStatusLabel2</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
-  </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>153, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en-US</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
