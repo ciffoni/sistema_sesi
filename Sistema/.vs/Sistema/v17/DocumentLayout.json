@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:classe\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\sessaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:classe\\sessaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\configuracao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:configuracao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\configuracao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:configuracao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\localizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,19 +39,7 @@
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\sessaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:classe\\sessaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\classe\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:classe\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,7 +47,7 @@
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:configuracao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\classe\\configuracao.helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\configuracao.helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:classe\\configuracao.helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -51,20 +55,12 @@
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\fluxocaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\fluxocaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:fluxocaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|c:\\users\\pcbr4\\onedrive\\favoritos\\documentos\\github\\sistema_sesi\\sistema\\listarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\listarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:listarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|solutionrelative:frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55924657-3760-421C-A5B0-191F42576104}|Sistema.csproj|C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,33 +130,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Configuracao.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Configuracao.cs",
-              "RelativeDocumentMoniker": "Configuracao.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Configuracao.cs",
-              "RelativeToolTip": "Configuracao.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAjwEAAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "conexao.cs",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\conexao.cs",
+              "RelativeDocumentMoniker": "classe\\conexao.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\conexao.cs",
+              "RelativeToolTip": "classe\\conexao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T17:22:26.416Z",
+              "WhenOpened": "2025-07-11T20:01:56.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
+              "RelativeDocumentMoniker": "FrmUsuario.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
+              "RelativeToolTip": "FrmUsuario.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAIgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T18:10:38.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "SessaoUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\SessaoUsuario.cs",
-              "RelativeDocumentMoniker": "classe\\SessaoUsuario.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\SessaoUsuario.cs",
-              "RelativeToolTip": "classe\\SessaoUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAWwLwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:52:35.173Z",
+              "WhenOpened": "2025-07-11T12:55:59.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T13:05:07.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design - Ingl\u00EAs (Estados Unidos)]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -172,20 +194,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAjwA4AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Configuracao.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Configuracao.cs",
+              "RelativeDocumentMoniker": "Configuracao.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Configuracao.cs [Design]",
+              "RelativeToolTip": "Configuracao.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T19:45:05.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T14:52:47.934Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "FrmUsuario.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
               "RelativeDocumentMoniker": "FrmUsuario.cs",
@@ -197,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Localizacao.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\Localizacao.cs",
               "RelativeDocumentMoniker": "classe\\Localizacao.cs",
@@ -211,57 +232,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAkwCAAAAAMAAAAAAAAAA==",
+              "Title": "SessaoUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\SessaoUsuario.cs",
+              "RelativeDocumentMoniker": "classe\\SessaoUsuario.cs",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\SessaoUsuario.cs",
+              "RelativeToolTip": "classe\\SessaoUsuario.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T13:05:07.714Z",
+              "WhenOpened": "2025-07-02T16:52:35.173Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAWwLwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T12:55:59.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Configuracao.cs [Design - Portugu\u00EAs (Brasil)]",
+              "DocumentIndex": 5,
+              "Title": "Configuracao.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Configuracao.cs",
               "RelativeDocumentMoniker": "Configuracao.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Configuracao.cs [Design - Portugu\u00EAs (Brasil)]",
-              "RelativeToolTip": "Configuracao.cs [Design - Portugu\u00EAs (Brasil)]",
+              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Configuracao.cs",
+              "RelativeToolTip": "Configuracao.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T14:52:47.934Z",
-              "EditorCaption": " [Design - Portugu\u00EAs (Brasil)]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "conexao.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\conexao.cs",
-              "RelativeDocumentMoniker": "classe\\conexao.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\conexao.cs",
-              "RelativeToolTip": "classe\\conexao.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA3wCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T20:01:56.628Z",
+              "WhenOpened": "2025-07-11T17:22:26.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "FrmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmLogin.cs",
               "RelativeDocumentMoniker": "FrmLogin.cs",
@@ -273,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FrmLogin.Designer.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmLogin.Designer.cs",
               "RelativeDocumentMoniker": "FrmLogin.Designer.cs",
@@ -286,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Configuracao.Helper.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\classe\\Configuracao.Helper.cs",
               "RelativeDocumentMoniker": "classe\\Configuracao.Helper.cs",
@@ -325,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "frmproduto.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs",
               "RelativeDocumentMoniker": "frmproduto.cs",
@@ -338,20 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FrmUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
-              "RelativeDocumentMoniker": "FrmUsuario.cs",
-              "ToolTip": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmUsuario.cs",
-              "RelativeToolTip": "FrmUsuario.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAArwF0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T18:10:38.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "FrmLogin.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmLogin.cs",
               "RelativeDocumentMoniker": "FrmLogin.cs",
@@ -364,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "Cozinha.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Cozinha.cs",
               "RelativeDocumentMoniker": "Cozinha.cs",
@@ -376,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "Cozinha.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\Cozinha.cs",
               "RelativeDocumentMoniker": "Cozinha.cs",
@@ -389,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "pedido.cs",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\pedido.cs",
               "RelativeDocumentMoniker": "pedido.cs",
@@ -402,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "frmproduto.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\frmproduto.cs",
               "RelativeDocumentMoniker": "frmproduto.cs",
@@ -414,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "carrinho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\carrinho.cs",
               "RelativeDocumentMoniker": "carrinho.cs",
@@ -426,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "pedido.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\pedido.cs",
               "RelativeDocumentMoniker": "pedido.cs",
@@ -438,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "FrmlistarPedido.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\FrmlistarPedido.cs",
               "RelativeDocumentMoniker": "FrmlistarPedido.cs",
@@ -450,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "listarproduto.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pcbr4\\OneDrive\\Favoritos\\Documentos\\GitHub\\sistema_sesi\\Sistema\\listarproduto.cs",
               "RelativeDocumentMoniker": "listarproduto.cs",

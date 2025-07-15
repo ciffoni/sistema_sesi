@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sistema</name>
+    </assembly>
+    <members>
+        <member name="F:Sistema.carrinho.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.carrinho.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.carrinho.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Sistema.classe.conexao">
+            <summary>
+            Gerencia a conexão com o banco de dados MySQL para a aplicação.
+            Esta classe é responsável por fornecer uma instância de conexão e gerenciar seu estado.
+            </summary>
+            <remarks>
+            Os parâmetros de conexão (servidor, banco, usuário, senha) são definidos como estáticos
+            dentro da classe. Certifique-se de que estas credenciais estejam seguras e
+            não expostas em ambientes de produção. Considere usar configurações externas
+            (ex: App.config) para ambientes de produção.
+            </remarks>
+        </member>
+        <member name="F:Sistema.classe.conexao.servidor">
+            <summary>
+            Endereço do servidor MySQL.
+            </summary>
+        </member>
+        <member name="F:Sistema.classe.conexao.banco">
+            <summary>
+            Nome do banco de dados a ser utilizado.
+            </summary>
+        </member>
+        <member name="F:Sistema.classe.conexao.usuario">
+            <summary>
+            Nome de usuário para autenticação no banco de dados.
+            </summary>
+        </member>
+        <member name="F:Sistema.classe.conexao.senha">
+            <summary>
+            Senha do usuário do banco de dados.
+            </summary>
+            <remarks>
+            **ATENÇÃO**: Usar senhas codificadas diretamente no código-fonte não é seguro
+            para ambientes de produção. Considere usar métodos mais seguros de armazenamento
+            e recuperação de credenciais.
+            </remarks>
+        </member>
+        <member name="F:Sistema.classe.conexao.con">
+            <summary>
+            Instância da conexão MySQL aberta.
+            É nula se a conexão não estiver ativa ou tiver sido desconectada.
+            </summary>
+        </member>
+        <member name="F:Sistema.classe.conexao.data_source">
+            <summary>
+            String de conexão MySQL completa, montada a partir dos atributos estáticos.
+            </summary>
+            <remarks>
+            Formato: "datasource=[servidor];username=[usuario];password=[senha];database=[banco]"
+            </remarks>
+        </member>
+        <member name="M:Sistema.classe.conexao.getConexao">
+            <summary>
+            Obtém uma nova instância de conexão com o banco de dados MySQL.
+            </summary>
+            <returns>Um objeto <see cref="T:MySql.Data.MySqlClient.MySqlConnection"/> configurado para a conexão.</returns>
+            <remarks>
+            Este método cria e retorna uma nova instância de conexão a cada chamada,
+            mas não a abre. A abertura da conexão deve ser feita explicitamente
+            pelo código que a utiliza (ex: `con.Open()`).
+            </remarks>
+        </member>
+        <member name="M:Sistema.classe.conexao.desconectar">
+            <summary>
+            Define a instância da conexão como nula, efetivamente liberando-a.
+            </summary>
+            <remarks>
+            Este método não fecha ativamente a conexão com o banco de dados (chamar `con.Close()` ou `con.Dispose()`).
+            Ele apenas redefine a referência local `con`. Para garantir o fechamento e liberação de recursos,
+            é fortemente recomendado que a conexão seja fechada usando um bloco `using` ou `con.Close()`
+            no local onde a conexão é aberta.
+            </remarks>
+        </member>
+        <member name="F:Sistema.Configuracao.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.Configuracao.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.Configuracao.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Sistema.Cozinha.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.Cozinha.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.Cozinha.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Sistema.fluxocaixa.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.fluxocaixa.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.fluxocaixa.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Sistema.FrmPrincipal.components">
+            <summary>
+            Variável de designer necessária.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Limpar os recursos que estão sendo usados.
+            </summary>
+            <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        </member>
+        <member name="M:Sistema.FrmPrincipal.InitializeComponent">
+            <summary>
+            Método necessário para suporte ao Designer - não modifique 
+            o conteúdo deste método com o editor de código.
+            </summary>
+        </member>
+        <member name="F:Sistema.FrmlistarPedido.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmlistarPedido.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.FrmlistarPedido.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Sistema.FrmLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.FrmLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Sistema.frmproduto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.frmproduto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.frmproduto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Sistema.FrmUsuario">
+            <summary>
+            Representa o formulário de gerenciamento de usuários da aplicação.
+            Permite cadastrar, visualizar, editar e excluir informações de usuários no sistema.
+            </summary>
+            <remarks>
+            Este formulário interage diretamente com a tabela 'usuario' do banco de dados MySQL.
+            Utiliza hashing de senhas com BCrypt para segurança.
+            </remarks>
+        </member>
+        <member name="F:Sistema.FrmUsuario.conexao">
+            <summary>
+            Instância da conexão MySQL utilizada pelos métodos deste formulário.
+            Recomenda-se usar a classe 'conexao' ou um gerenciador de conexões para centralizar.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmUsuario.#ctor">
+            <summary>
+            Inicializa uma nova instância do formulário <see cref="T:Sistema.FrmUsuario"/>.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmUsuario.btnCadastrar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Manipulador de evento para o clique do botão "Cadastrar".
+            Tenta inserir um novo usuário no banco de dados com base nos dados dos campos de texto.
+            </summary>
+            <param name="sender">A fonte do evento.</param>
+            <param name="e">Os dados do evento.</param>
+        </member>
+        <member name="M:Sistema.FrmUsuario.FrmUsuario_Load(System.Object,System.EventArgs)">
+            <summary>
+            Manipulador de evento para o carregamento do formulário <see cref="T:Sistema.FrmUsuario"/>.
+            Carrega os dados dos usuários no DataGridView e aplica estilos visuais.
+            </summary>
+            <param name="sender">A fonte do evento.</param>
+            <param name="e">Os dados do evento.</param>
+        </member>
+        <member name="M:Sistema.FrmUsuario.obterdados">
+            <summary>
+            Obtém todos os registros de usuários do banco de dados.
+            </summary>
+            <returns>Um <see cref="T:System.Data.DataTable"/> contendo os dados dos usuários.</returns>
+            <remarks>
+            Para ambientes de produção, considere implementar paginação ou filtros
+            para grandes volumes de dados.
+            </remarks>
+        </member>
+        <member name="M:Sistema.FrmUsuario.btnExcluir_Click(System.Object,System.EventArgs)">
+            <summary>
+            Manipulador de evento para o clique do botão "Excluir".
+            Exclui um usuário selecionado no DataGridView com base no seu ID.
+            </summary>
+            <param name="sender">A fonte do evento.</param>
+            <param name="e">Os dados do evento.</param>
+        </member>
+        <member name="M:Sistema.FrmUsuario.dadosUsuario_CellContentClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Manipulador de evento para o clique em uma célula do DataGridView de usuários.
+            Preenche os campos de texto do formulário com os dados do usuário selecionado.
+            </summary>
+            <param name="sender">A fonte do evento.</param>
+            <param name="e">Os dados do evento, contendo informações sobre a célula clicada.</param>
+        </member>
+        <member name="M:Sistema.FrmUsuario.limparCampos">
+            <summary>
+            Limpa todos os campos de entrada de texto e combobox do formulário.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmUsuario.btnEditar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Manipulador de evento para o clique do botão "Editar".
+            Tenta atualizar as informações de um usuário existente no banco de dados.
+            </summary>
+            <param name="sender">A fonte do evento.</param>
+            <param name="e">Os dados do evento.</param>
+        </member>
+        <member name="F:Sistema.FrmUsuario.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmUsuario.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.FrmUsuario.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Sistema.listarproduto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.listarproduto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.listarproduto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Sistema.pedido.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.pedido.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.pedido.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Sistema.Program.Main">
+            <summary>
+            Ponto de entrada principal para o aplicativo.
+            </summary>
+        </member>
+        <member name="T:Sistema.Properties.Resources">
+            <summary>
+              Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+            </summary>
+        </member>
+        <member name="P:Sistema.Properties.Resources.ResourceManager">
+            <summary>
+              Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+            </summary>
+        </member>
+        <member name="P:Sistema.Properties.Resources.Culture">
+            <summary>
+              Substitui a propriedade CurrentUICulture do thread atual para todas as
+              pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+            </summary>
+        </member>
+        <member name="P:Sistema.Properties.Resources.fundo_produto">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Sistema.Properties.Resources.fundo_produto1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Sistema.Properties.Resources.income">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Sistema.Properties.Resources.printer">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -13,15 +13,35 @@ using BCrypt.Net;
 using Sistema.classe;
 namespace Sistema
 {
+    /// <summary>
+    /// Representa o formulário de gerenciamento de usuários da aplicação.
+    /// Permite cadastrar, visualizar, editar e excluir informações de usuários no sistema.
+    /// </summary>
+    /// <remarks>
+    /// Este formulário interage diretamente com a tabela 'usuario' do banco de dados MySQL.
+    /// Utiliza hashing de senhas com BCrypt para segurança.
+    /// </remarks>
     public partial class FrmUsuario : Form
     {
+        /// <summary>
+        /// Instância da conexão MySQL utilizada pelos métodos deste formulário.
+        /// Recomenda-se usar a classe 'conexao' ou um gerenciador de conexões para centralizar.
+        /// </summary>
         // criar a conexao do mysql
         MySqlConnection conexao;
+        /// <summary>
+        /// Inicializa uma nova instância do formulário <see cref="FrmUsuario"/>.
+        /// </summary>
         public FrmUsuario()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Manipulador de evento para o clique do botão "Cadastrar".
+        /// Tenta inserir um novo usuário no banco de dados com base nos dados dos campos de texto.
+        /// </summary>
+        /// <param name="sender">A fonte do evento.</param>
+        /// <param name="e">Os dados do evento.</param>
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             try
@@ -84,7 +104,12 @@ namespace Sistema
                 MessageBox.Show("Erro :"+ ex.Message);
             }
         }
-
+        /// <summary>
+        /// Manipulador de evento para o carregamento do formulário <see cref="FrmUsuario"/>.
+        /// Carrega os dados dos usuários no DataGridView e aplica estilos visuais.
+        /// </summary>
+        /// <param name="sender">A fonte do evento.</param>
+        /// <param name="e">Os dados do evento.</param>
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             //chama os dados da consulta para montar no datagridview
@@ -99,6 +124,14 @@ namespace Sistema
         }
 
         // criar um metodo para pesquisar as informações
+        /// <summary>
+        /// Obtém todos os registros de usuários do banco de dados.
+        /// </summary>
+        /// <returns>Um <see cref="System.Data.DataTable"/> contendo os dados dos usuários.</returns>
+        /// <remarks>
+        /// Para ambientes de produção, considere implementar paginação ou filtros
+        /// para grandes volumes de dados.
+        /// </remarks>
         public DataTable obterdados()
         {
                 //criar uma tabela de dados
@@ -124,6 +157,12 @@ namespace Sistema
     
         }
 
+        /// <summary>
+        /// Manipulador de evento para o clique do botão "Excluir".
+        /// Exclui um usuário selecionado no DataGridView com base no seu ID.
+        /// </summary>
+        /// <param name="sender">A fonte do evento.</param>
+        /// <param name="e">Os dados do evento.</param>
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (txtid.Text != "")
@@ -159,6 +198,12 @@ namespace Sistema
                 MessageBox.Show("Escolher um usuário para excluir");
             }
         }
+        /// <summary>
+        /// Manipulador de evento para o clique em uma célula do DataGridView de usuários.
+        /// Preenche os campos de texto do formulário com os dados do usuário selecionado.
+        /// </summary>
+        /// <param name="sender">A fonte do evento.</param>
+        /// <param name="e">Os dados do evento, contendo informações sobre a célula clicada.</param>
 
         private void dadosUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -182,6 +227,9 @@ namespace Sistema
 
         }
         //metodo limpar campos
+        /// <summary>
+        /// Limpa todos os campos de entrada de texto e combobox do formulário.
+        /// </summary>
         private void limparCampos()
         {
             txtid.Clear();
@@ -190,7 +238,12 @@ namespace Sistema
             txtSenha.Clear();
             
         }
-
+        /// <summary>
+        /// Manipulador de evento para o clique do botão "Editar".
+        /// Tenta atualizar as informações de um usuário existente no banco de dados.
+        /// </summary>
+        /// <param name="sender">A fonte do evento.</param>
+        /// <param name="e">Os dados do evento.</param>
         private void btnEditar_Click(object sender, EventArgs e)
         {
             try
