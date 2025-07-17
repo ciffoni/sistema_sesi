@@ -42,6 +42,7 @@
             this.lblSaldoFinal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartFluxoCaixa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,11 +161,22 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Data Final";
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Location = new System.Drawing.Point(838, 33);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(75, 64);
+            this.btnExcel.TabIndex = 11;
+            this.btnExcel.Text = "Gerar Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // fluxocaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 537);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblSaldoFinal);
@@ -198,5 +210,6 @@
         private System.Windows.Forms.Label lblSaldoFinal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

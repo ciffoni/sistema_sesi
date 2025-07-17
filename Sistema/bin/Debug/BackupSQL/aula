@@ -1,0 +1,175 @@
+-- MySqlBackup.NET 2.6.4.0
+-- Dump Time: 2025-07-16 11:45:01
+-- --------------------------------------
+-- Server version 10.4.32-MariaDB mariadb.org binary distribution
+
+
+
+CREATE DATABASE IF NOT EXISTS `sistema` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `sistema`;
+
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- 
+-- Definition of itenspedido
+-- 
+
+DROP TABLE IF EXISTS `itenspedido`;
+CREATE TABLE IF NOT EXISTS `itenspedido` (
+  `iditens` int(11) NOT NULL AUTO_INCREMENT,
+  `idproduto` int(11) DEFAULT NULL,
+  `quantidade` int(11) DEFAULT NULL,
+  `total` decimal(5,2) DEFAULT NULL,
+  `idpedido` int(11) NOT NULL,
+  PRIMARY KEY (`iditens`)
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 
+-- Dumping data for table itenspedido
+-- 
+
+/*!40000 ALTER TABLE `itenspedido` DISABLE KEYS */;
+INSERT INTO `itenspedido`(`iditens`,`idproduto`,`quantidade`,`total`,`idpedido`) VALUES(54,18,1,8.50,26),(55,20,1,35.70,26),(56,18,1,8.50,27),(57,19,1,12.50,27),(58,20,1,35.70,27),(59,22,1,8.50,28),(60,23,1,4.50,28),(61,19,1,12.50,29),(62,20,1,35.70,29),(63,18,3,25.50,29),(64,18,1,8.50,30),(65,21,1,18.50,30),(66,18,3,25.50,31),(67,22,3,25.50,31),(68,18,4,34.00,32),(69,22,2,17.00,32),(70,24,1,12.00,32),(71,20,1,35.70,33);
+/*!40000 ALTER TABLE `itenspedido` ENABLE KEYS */;
+
+-- 
+-- Definition of lancamentosfinanceiros
+-- 
+
+DROP TABLE IF EXISTS `lancamentosfinanceiros`;
+CREATE TABLE IF NOT EXISTS `lancamentosfinanceiros` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `DataLancamento` datetime NOT NULL,
+  `Descricao` varchar(255) NOT NULL,
+  `Valor` decimal(10,2) NOT NULL,
+  `Tipo` varchar(20) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 
+-- Dumping data for table lancamentosfinanceiros
+-- 
+
+/*!40000 ALTER TABLE `lancamentosfinanceiros` DISABLE KEYS */;
+INSERT INTO `lancamentosfinanceiros`(`Id`,`DataLancamento`,`Descricao`,`Valor`,`Tipo`) VALUES(1,'2025-07-01 10:00:00','Compra de matéria-prima',150.75,'Saida'),(2,'2025-07-01 15:30:00','Aluguel do mês',2000.00,'Saida'),(3,'2025-07-02 09:00:00','Reembolso de cliente',50.00,'Entrada');
+/*!40000 ALTER TABLE `lancamentosfinanceiros` ENABLE KEYS */;
+
+-- 
+-- Definition of pedido
+-- 
+
+DROP TABLE IF EXISTS `pedido`;
+CREATE TABLE IF NOT EXISTS `pedido` (
+  `idpedido` int(11) NOT NULL AUTO_INCREMENT,
+  `idusuario` int(11) DEFAULT NULL,
+  `formapagamento` varchar(60) DEFAULT NULL,
+  `data_pedido` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `status` varchar(60) NOT NULL,
+  `total` decimal(5,2) NOT NULL,
+  `tipo` varchar(60) NOT NULL,
+  PRIMARY KEY (`idpedido`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 
+-- Dumping data for table pedido
+-- 
+
+/*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
+INSERT INTO `pedido`(`idpedido`,`idusuario`,`formapagamento`,`data_pedido`,`status`,`total`,`tipo`) VALUES(26,2,'dinheiro','2025-07-09 19:17:06','Pronto',44.20,'entrada'),(27,4,'dinheiro','2025-07-09 19:17:15','Entregue',56.70,'entrada'),(28,4,'Cartão credito','2025-07-10 18:52:52','Pronto',13.00,'entrada'),(29,5,'dinheiro','2025-07-10 19:42:24','Em Preparo',73.70,'entrada'),(30,5,'dinheiro','2025-07-10 19:47:04','Entregue',27.00,'entrada'),(31,4,'dinheiro','2025-07-10 19:47:14','Pronto',51.00,'entrada'),(32,4,'Cartão credito','2025-07-10 19:12:33','Novo',63.00,'entrada'),(33,4,'PIX','2025-07-11 13:53:27','Novo',35.70,'entrada');
+/*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
+
+-- 
+-- Definition of produto
+-- 
+
+DROP TABLE IF EXISTS `produto`;
+CREATE TABLE IF NOT EXISTS `produto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(100) DEFAULT NULL,
+  `quantidade` int(11) DEFAULT NULL,
+  `preco` decimal(10,2) DEFAULT NULL,
+  `datacadastro` date DEFAULT NULL,
+  `foto` varchar(160) DEFAULT NULL,
+  `promocao` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 
+-- Dumping data for table produto
+-- 
+
+/*!40000 ALTER TABLE `produto` DISABLE KEYS */;
+INSERT INTO `produto`(`id`,`descricao`,`quantidade`,`preco`,`datacadastro`,`foto`,`promocao`) VALUES(18,'coca cola',35,8.50,'2025-06-24 00:00:00','ImagensProdutos\\coca cola.png',1),(19,'batata frita',16,12.50,'2025-06-25 00:00:00','ImagensProdutos\\batata frita.png',0),(20,'prato feito brasileiro',15,35.70,'2025-06-24 00:00:00','ImagensProdutos\\prato feito.png',1),(21,'pizza calabresa',34,18.50,'2025-06-26 00:00:00','ImagensProdutos\\pizza.png',1),(22,'coxinha de frango catupiry',6,8.50,'2025-06-26 00:00:00','ImagensProdutos\\coxinha frango catupiry.png',1),(23,'café expresso',14,4.50,'2025-06-24 00:00:00','ImagensProdutos\\cafeexpresspo.png',0),(24,'x-salada',9,12.00,'2025-07-01 00:00:00','ImagensProdutos\\xsalada.jfif',1);
+/*!40000 ALTER TABLE `produto` ENABLE KEYS */;
+
+-- 
+-- Definition of usuario
+-- 
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `senha` varchar(255) DEFAULT NULL,
+  `cargo` varchar(60) NOT NULL,
+  `Ativo` tinyint(1) DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+-- 
+-- Dumping data for table usuario
+-- 
+
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario`(`id`,`nome`,`email`,`senha`,`cargo`,`Ativo`) VALUES(1,'jorge','jorge@gmail.com','aula123','Gerente',1),(2,'ciffoni','ciffoni@gmail.com','$2b$10$UmZfwrqJu19j16aNHrQfOOLn8sW/M/y6ZX49qVvVmP5cv5z23RknC','Gerente',1),(3,'amanda','amanda@gmail.com','$2b$10$QAP8MKr.gj.f0I4OsoVB7eyvRxNLgsO7mPYPU1YUv0ggJ/yZdEGB6','Cozinha',1),(4,'Mariana','mariana','$2b$10$2XvHcVTdNVui5iroJt9/0ea4j9CjIS0U8floBVyhlv3dEBIC/Dv8a','Cliente',1),(5,'mesa1','mesa1','$2b$10$iZEDIKz5nHgkniCBClFYk.uPkDJMuCdbFPKHHB7QnDIL5.tGmhAFy','Cliente',1);
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
+-- 
+-- Dumping triggers
+-- 
+
+DROP TRIGGER /*!50030 IF EXISTS */ `trg_baixa_estoque_apos_venda`;
+DELIMITER |
+CREATE TRIGGER `trg_baixa_estoque_apos_venda` AFTER INSERT ON `itenspedido` FOR EACH ROW BEGIN
+    -- Atualiza a quantidade em estoque na tabela 'produto'
+    -- A nova quantidade será a quantidade atual menos a quantidade vendida (NEW.Quantidade)
+    UPDATE produto
+    SET produto.quantidade = produto.quantidade - NEW.Quantidade
+    WHERE produto.id = NEW.idproduto;
+
+    -- Opcional: Adicionar uma verificação para estoque negativo (se necessário)
+    -- Se você quiser evitar que o estoque fique negativo, ou registrar um aviso,
+    -- pode adicionar lógica aqui. Por exemplo:
+    -- IF (SELECT quantidade FROM produto WHERE id = NEW.ProdutoId) < 0 THEN
+    --     -- Sinalize um erro ou insira um registro em uma tabela de logs de estoque negativo
+    --     -- SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Estoque insuficiente para o produto!';
+    -- END IF;
+END |
+DELIMITER ;
+
+
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+
+-- Dump completed on 2025-07-16 11:45:01
+-- Total time: 0:0:0:0:292 (d:h:m:s:ms)

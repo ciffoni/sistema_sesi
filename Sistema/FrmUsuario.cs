@@ -40,10 +40,19 @@ namespace Sistema
         /// Manipulador de evento para o clique do botão "Cadastrar".
         /// Tenta inserir um novo usuário no banco de dados com base nos dados dos campos de texto.
         /// </summary>
-        /// <param name="sender">A fonte do evento.</param>
-        /// <param name="e">Os dados do evento.</param>
+        /// <param name="sender">Cadastrar Novo Usuário.</param>
+        /// <param name="e">Preencher as informações solicitadas.</param>
+        
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            /// <param name="txtNOme">nome do usuário</param>
+            /// <param name="txtEmail">email para entrar no sistema</param>
+            /// <param name="cboCargo">define seu perfil no sistema</param>
+            /// <param name="txtSenha">Senha para validar no sistema</param>
+
+            /// <returns>retorna o cadastro no sistema</returns>
+            /// <remarks>Validar todas as informações</remarks>
+
             try
             {
 
@@ -56,7 +65,8 @@ namespace Sistema
               //montar o script sql para executar
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
                 //abrir o banco de dados
-                string senhaOriginal=txtSenha.Text.Trim();
+                
+                string senhaOriginal =txtSenha.Text.Trim();
                 string senhahash = BCrypt.Net.BCrypt.HashPassword(senhaOriginal);
                 comando.Parameters.AddWithValue("@nome", txtNOme.Text.Trim());
                 comando.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
@@ -108,8 +118,8 @@ namespace Sistema
         /// Manipulador de evento para o carregamento do formulário <see cref="FrmUsuario"/>.
         /// Carrega os dados dos usuários no DataGridView e aplica estilos visuais.
         /// </summary>
-        /// <param name="sender">A fonte do evento.</param>
-        /// <param name="e">Os dados do evento.</param>
+        /// <param name="sender">Carregamento do sistema.</param>
+        /// <param name="e">Visualizar os registros no datagrid.</param>
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             //chama os dados da consulta para montar no datagridview
@@ -161,10 +171,15 @@ namespace Sistema
         /// Manipulador de evento para o clique do botão "Excluir".
         /// Exclui um usuário selecionado no DataGridView com base no seu ID.
         /// </summary>
-        /// <param name="sender">A fonte do evento.</param>
-        /// <param name="e">Os dados do evento.</param>
+        /// <param name="sender">Botão Excluir.</param>
+        /// <param name="e">Apaga as informações do Usuário.</param>
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            /// <param name="txtid">Verificar se tem registro</param>
+
+            /// <returns>Verificar se há registro selecionado</returns>
+            /// <remarks>Excluir as informações do ID selecionado</remarks>
+
             if (txtid.Text != "")
             {
                 //caminho de configuração do servidor
@@ -202,7 +217,7 @@ namespace Sistema
         /// Manipulador de evento para o clique em uma célula do DataGridView de usuários.
         /// Preenche os campos de texto do formulário com os dados do usuário selecionado.
         /// </summary>
-        /// <param name="sender">A fonte do evento.</param>
+        /// <param name="sender">Selecionar um item da celula .</param>
         /// <param name="e">Os dados do evento, contendo informações sobre a célula clicada.</param>
 
         private void dadosUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)

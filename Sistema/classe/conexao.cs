@@ -49,7 +49,7 @@ namespace Sistema.classe
         /// para ambientes de produção. Considere usar métodos mais seguros de armazenamento
         /// e recuperação de credenciais.
         /// </remarks>
-        static private string senha = "aula123";
+        static private string senha = "";
         // ===========================================
         // INSTÂNCIA DA CONEXÃO
         // ===========================================

@@ -162,6 +162,55 @@
             o conteúdo deste método com o editor de código.
             </summary>
         </member>
+        <member name="T:Sistema.FrmBackup">
+            <summary>
+            Classe responsável por gerenciar operações de backup (exportação) do banco de dados MySQL.
+            Utiliza a biblioteca MySqlBackup.NET para realizar o dump do banco de dados.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmBackup.btnExportar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Realiza a exportação (backup) completo do banco de dados MySQL para um arquivo .sql.
+            </summary>
+            <param name="con">Uma instância de conexão <see cref="T:MySql.Data.MySqlClient.MySqlConnection"/> aberta ou a ser aberta.</param>
+            <param name="caminhoDestino">O caminho completo, incluindo o nome do arquivo, onde o backup será salvo (ex: "C:\\Backups\\meu_banco_20240716.sql").</param>
+            <remarks>
+            Este método configura a exportação para incluir a criação do banco de dados, procedimentos armazenados e todos os dados das tabelas.
+            A conexão é aberta e fechada dentro deste método.
+            </remarks>
+            <exception cref="T:MySql.Data.MySqlClient.MySqlException">Lançada se ocorrer um erro durante a operação de conexão ou backup do MySQL.</exception>
+            <exception cref="T:System.IO.IOException">Lançada se houver problemas de permissão de escrita ou acesso ao arquivo de destino.</exception>
+        </member>
+        <member name="M:Sistema.FrmBackup.btnImportar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Realiza a importação (restauração) de um banco de dados MySQL a partir de um arquivo .sql.
+            </summary>
+            <param name="con">Uma instância de conexão <see cref="T:MySql.Data.MySqlClient.MySqlConnection"/> aberta ou a ser aberta.</param>
+            <param name="caminhoOrigem">O caminho completo do arquivo .sql a ser importado.</param>
+            <remarks>
+            Este método importa todos os dados e estruturas contidos no arquivo SQL.
+            Recomenda-se garantir que o banco de dados de destino esteja vazio ou pronto para ser sobrescrito.
+            </remarks>
+            <exception cref="T:MySql.Data.MySqlClient.MySqlException">Lançada se ocorrer um erro durante a operação de importação do MySQL.</exception>
+            <exception cref="T:System.IO.IOException">Lançada se houver problemas de leitura do arquivo de origem.</exception>
+        </member>
+        <member name="F:Sistema.FrmBackup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sistema.FrmBackup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sistema.FrmBackup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="F:Sistema.FrmlistarPedido.components">
             <summary>
             Required designer variable.
@@ -195,6 +244,57 @@
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
+        </member>
+        <member name="T:Sistema.frmproduto">
+            <summary>
+            Classe Produto
+            Cadastrar os produtos que serão gerenciados pela loja
+            </summary>
+        </member>
+        <member name="M:Sistema.frmproduto.btnfoto_Click(System.Object,System.EventArgs)">
+            <summary>
+            Botão para escolher a foto do produto
+            </summary>
+            <param name="sender">Escolher a foto</param>
+            <param name="e">definida pela extensão JPG, PNG</param>
+            <returns>retorna a imagem do produto na picture box</returns>
+            <remarks>Validar se a imagem é valida ao sistema</remarks>
+        </member>
+        <member name="M:Sistema.frmproduto.limparCampos">
+            <summary>
+            Metodo para limpar as informações dos campos do  produto
+            </summary>
+            <param name="sender">Limpar Campos</param>
+            <param name="e">limpa as informações do produto</param>
+            <returns>limpa as informações do produto apos registro </returns>
+            <remarks>limpa as informações no sistema</remarks>
+        </member>
+        <member name="M:Sistema.frmproduto.btncadastrar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Botão para cadastrar as informações do produto
+            </summary>
+            <param name="sender">cadastrar Produtos</param>
+            <param name="e">Validar as informações preenchidas</param>
+            <returns>registra as informações do produto </returns>
+            <remarks>grava as informações no sistema</remarks>
+        </member>
+        <member name="M:Sistema.frmproduto.btneditar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Botão edita as informações do produto
+            </summary>
+            <param name="sender">Editar as informações do produto</param>
+            <param name="e">alterar as informações dos produtos</param>
+            <returns>atualiza as informações do produto</returns>
+            <remarks>Corrigir erros de lançamento ao sistema</remarks>
+        </member>
+        <member name="M:Sistema.frmproduto.obterdados">
+            <summary>
+            Metodo para obter as informações dos produtos
+            </summary>
+            <param name="sender">Obter dados</param>
+            <param name="e">buscar as informações do produto</param>
+            <returns>listar as informações do produto </returns>
+            <remarks>exibir as informações no sistema</remarks>
         </member>
         <member name="F:Sistema.frmproduto.components">
             <summary>
@@ -239,16 +339,16 @@
             Manipulador de evento para o clique do botão "Cadastrar".
             Tenta inserir um novo usuário no banco de dados com base nos dados dos campos de texto.
             </summary>
-            <param name="sender">A fonte do evento.</param>
-            <param name="e">Os dados do evento.</param>
+            <param name="sender">Cadastrar Novo Usuário.</param>
+            <param name="e">Preencher as informações solicitadas.</param>
         </member>
         <member name="M:Sistema.FrmUsuario.FrmUsuario_Load(System.Object,System.EventArgs)">
             <summary>
             Manipulador de evento para o carregamento do formulário <see cref="T:Sistema.FrmUsuario"/>.
             Carrega os dados dos usuários no DataGridView e aplica estilos visuais.
             </summary>
-            <param name="sender">A fonte do evento.</param>
-            <param name="e">Os dados do evento.</param>
+            <param name="sender">Carregamento do sistema.</param>
+            <param name="e">Visualizar os registros no datagrid.</param>
         </member>
         <member name="M:Sistema.FrmUsuario.obterdados">
             <summary>
@@ -265,15 +365,15 @@
             Manipulador de evento para o clique do botão "Excluir".
             Exclui um usuário selecionado no DataGridView com base no seu ID.
             </summary>
-            <param name="sender">A fonte do evento.</param>
-            <param name="e">Os dados do evento.</param>
+            <param name="sender">Botão Excluir.</param>
+            <param name="e">Apaga as informações do Usuário.</param>
         </member>
         <member name="M:Sistema.FrmUsuario.dadosUsuario_CellContentClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
             <summary>
             Manipulador de evento para o clique em uma célula do DataGridView de usuários.
             Preenche os campos de texto do formulário com os dados do usuário selecionado.
             </summary>
-            <param name="sender">A fonte do evento.</param>
+            <param name="sender">Selecionar um item da celula .</param>
             <param name="e">Os dados do evento, contendo informações sobre a célula clicada.</param>
         </member>
         <member name="M:Sistema.FrmUsuario.limparCampos">

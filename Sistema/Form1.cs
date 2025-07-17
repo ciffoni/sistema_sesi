@@ -162,7 +162,8 @@ namespace Sistema
 
         private void backupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmBackup backup = new FrmBackup();
+            backup.ShowDialog();
         }
 
         private void informaçãoSistemaToolStripMenuItem_Click(object sender, EventArgs e)

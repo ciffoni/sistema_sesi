@@ -14,6 +14,10 @@ using System.Windows.Forms;
 
 namespace Sistema
 {
+    /// <summary>
+    /// Classe Produto
+    /// Cadastrar os produtos que serão gerenciados pela loja
+    /// </summary>
     public partial class frmproduto : Form
     {
         //variavel publica conexao
@@ -24,7 +28,13 @@ namespace Sistema
           
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Botão para escolher a foto do produto
+        /// </summary>
+        /// <param name="sender">Escolher a foto</param>
+        /// <param name="e">definida pela extensão JPG, PNG</param>
+        /// <returns>retorna a imagem do produto na picture box</returns>
+        /// <remarks>Validar se a imagem é valida ao sistema</remarks>
         private void btnfoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -84,6 +94,13 @@ namespace Sistema
                 lblfoto.Text = foto.FileName;
             }*/
         }
+        /// <summary>
+        /// Metodo para limpar as informações dos campos do  produto
+        /// </summary>
+        /// <param name="sender">Limpar Campos</param>
+        /// <param name="e">limpa as informações do produto</param>
+        /// <returns>limpa as informações do produto apos registro </returns>
+        /// <remarks>limpa as informações no sistema</remarks>
         private void limparCampos()
         {
             txtCodigo.Clear();
@@ -91,6 +108,13 @@ namespace Sistema
             txtPreco.Clear();
             txtDescricao.Clear();
         }
+        /// <summary>
+        /// Botão para cadastrar as informações do produto
+        /// </summary>
+        /// <param name="sender">cadastrar Produtos</param>
+        /// <param name="e">Validar as informações preenchidas</param>
+        /// <returns>registra as informações do produto </returns>
+        /// <remarks>grava as informações no sistema</remarks>
         private void btncadastrar_Click(object sender, EventArgs e)
         {
             try
@@ -151,7 +175,13 @@ namespace Sistema
             
             label6.Text = calendario.ToString();
         }
-
+        /// <summary>
+        /// Botão edita as informações do produto
+        /// </summary>
+        /// <param name="sender">Editar as informações do produto</param>
+        /// <param name="e">alterar as informações dos produtos</param>
+        /// <returns>atualiza as informações do produto</returns>
+        /// <remarks>Corrigir erros de lançamento ao sistema</remarks>
         private void btneditar_Click(object sender, EventArgs e)
         {
             try
@@ -221,6 +251,13 @@ namespace Sistema
             ConfiguracaoHelper.AplicarEstiloCabecalhoPadrao(dataGridView1);
             ConfiguracaoHelper.AplicarEstiloLinhasPadrao(dataGridView1);
         }
+        /// <summary>
+        /// Metodo para obter as informações dos produtos
+        /// </summary>
+        /// <param name="sender">Obter dados</param>
+        /// <param name="e">buscar as informações do produto</param>
+        /// <returns>listar as informações do produto </returns>
+        /// <remarks>exibir as informações no sistema</remarks>
         public DataTable obterdados()
         {
             //criar uma tabela de dados

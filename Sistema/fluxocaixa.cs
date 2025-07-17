@@ -1,9 +1,12 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iText.StyledXmlParser.Jsoup.Nodes;
+using MySql.Data.MySqlClient;
+using Sistema.classe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +20,9 @@ namespace Sistema
     {
         MySqlConnection conexao;
         string data_source = "datasource=localhost;username=root;password='';database=sistema";
-
+        DateTime dataInicial ;
+        DateTime dataFinal ; // Inclui o dia inteiro
+        DataTable dtMovimentacoes;
         public fluxocaixa()
         {
             InitializeComponent();
@@ -72,14 +77,14 @@ namespace Sistema
 
         private void btnGerarRelatorio_Click(object sender, EventArgs e)
         {
-            DateTime dataInicial = dtpDataInicial.Value.Date;
-            DateTime dataFinal = dtpDataFinal.Value.Date.AddDays(1).AddSeconds(-1); // Inclui o dia inteiro
+             dataInicial = dtpDataInicial.Value.Date;
+            dataFinal = dtpDataFinal.Value.Date.AddDays(1).AddSeconds(-1); // Inclui o dia inteiro
 
             GerarRelatorio(dataInicial, dataFinal);
         }
         private void GerarRelatorio(DateTime inicio, DateTime fim)
         {
-            DataTable dtMovimentacoes = new DataTable();
+             dtMovimentacoes = new DataTable();
 
             conexao = new MySqlConnection(data_source);
           
@@ -183,6 +188,95 @@ namespace Sistema
             chartFluxoCaixa.Titles.Clear();
             chartFluxoCaixa.Titles.Add(tituloGrafico);
         }
-    
-}
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            string endereco = "relatoriofinanceiro.csv";
+            // Define a pasta de destino dentro do diretório de execução da aplicação
+            // Isso cria uma pasta "ImagensProdutos" onde o seu .exe está rodando
+            string pastaDestino = Path.Combine(Application.StartupPath, "RelatorioExcel");
+
+            // Verifica se a pasta existe, se não, cria
+            if (!Directory.Exists(pastaDestino))
+            {
+                Directory.CreateDirectory(pastaDestino);
+            }
+            string caminhoDestino = Path.Combine(pastaDestino, endereco);
+
+          
+
+            conexao com = new conexao();
+
+            using (StreamWriter writer = new StreamWriter(caminhoDestino, false, Encoding.GetEncoding("iso-8859-15")))
+
+            {
+
+                // Cabeçalho 
+                writer.WriteLine("Relatório Financeiro");
+                writer.WriteLine("Data;Valor;Tipo");
+
+
+                // Conexão com o banco de dados
+
+                MySqlConnection conexao = com.getConexao();
+
+
+                // Consulta para Entradas (Vendas de Pedidos)
+                string queryEntradas = @"
+                    SELECT data_pedido AS Data, Total AS Valor, 'Entrada' AS Tipo
+                    FROM pedido
+                    WHERE data_pedido BETWEEN @inicio AND @fim";
+
+                // Consulta para Outras Entradas e Saídas (LancamentosFinanceiros)
+                string queryLancamentos = @"
+                    SELECT DataLancamento AS Data, Valor, Tipo
+                    FROM LancamentosFinanceiros
+                    WHERE DataLancamento BETWEEN @inicio AND @fim";
+
+                /* Combina os dados
+                MySqlDataAdapter adapterEntradas = new MySqlDataAdapter(queryEntradas, conexao);
+                adapterEntradas.SelectCommand.Parameters.AddWithValue("@inicio", dataInicial);
+                adapterEntradas.SelectCommand.Parameters.AddWithValue("@fim", dataFinal);
+                adapterEntradas.Fill(dtMovimentacoes);
+
+                MySqlDataAdapter adapterLancamentos = new MySqlDataAdapter(queryLancamentos, conexao);
+                adapterLancamentos.SelectCommand.Parameters.AddWithValue("@inicio", dataInicial);
+                adapterLancamentos.SelectCommand.Parameters.AddWithValue("@fim", dataFinal);
+                adapterLancamentos.Fill(dtMovimentacoes);
+                */
+
+
+                MySqlCommand sqlComand = new MySqlCommand(queryLancamentos, conexao);
+                sqlComand.Parameters.AddWithValue("@inicio", dataInicial);
+                sqlComand.Parameters.AddWithValue("@fim", dataFinal);
+
+
+                conexao.Open();
+                // Combina os dados
+
+
+                using (IDataReader reader = sqlComand.ExecuteReader())
+
+                {
+
+                    while (reader.Read())
+
+                    {
+
+                        // escrevendo os registros
+
+                        writer.WriteLine(Convert.ToString(reader["data"]) + ";" + Convert.ToString(reader["valor"]) + ";" + Convert.ToString(reader["Tipo"]));
+
+                    }
+
+                }
+
+                conexao.Close();
+                // mensagem de arquivo gerado com sucesso.
+
+                MessageBox.Show("Relatório gerado com sucesso.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            }
+        }
     }
